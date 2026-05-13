@@ -1,13 +1,12 @@
 {
   "name": "startup-skills",
-  "displayName": "Startup Skills",
-  "description": "An Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides.",
   "version": "0.4.0",
   "owner": {
     "name": "quinnhall07"
   },
-  "homepage": "https://github.com/quinnhall07/startup-skills",
-  "license": "PolyForm-Noncommercial-1.0.0",
+  "metadata": {
+    "description": "An Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides."
+  },
   "plugins": [
     {
       "name": "startup-skills-full",
