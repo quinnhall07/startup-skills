@@ -2,7 +2,7 @@
 
 A Claude Code plugin marketplace that turns Claude into an Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides.
 
-**Status:** v0.1 — Discovery foundation (six skills, ten references). v0.2–v1.0 roadmap below.
+**Status:** v0.4 — full coded scope complete. Five plugins, sixteen skills, twenty-three references. Roadmap below covers what comes next (v1.0 polish).
 
 ---
 
@@ -12,7 +12,7 @@ Startup Skills compresses the time between "I have an idea (or no idea)" and "I 
 
 The tone is direct and willing to wound. The system will flatly tell a founder their idea is a tar pit, refuse to weight polite-customer signal, and halt building until behavioral demand is validated. It does this because diplomatic dishonesty causes six-month detours, and most founders fail not from bad execution but from cognitive delusion under pressure. Awareness of bias does not cure bias. The system installs the structural overrides — evidence weighting, pre-mortems, falsification pre-commitments — that bias-awareness alone cannot.
 
-Sixteen skills total across five plugins (when complete), plus a shared reference library of canonical methodology. v0.1 ships the first two plugins — `startup-skills-core` and `startup-skills-discovery` — covering orientation, founder context, idea generation, market intelligence, idea pressure-testing, and cofounder fit. Each skill is small, opinionated, and oriented toward a specific failure mode that destroys early-stage startups.
+Sixteen skills total across five plugins, plus a shared reference library of canonical methodology. v0.4 ships the full system: orientation, founder context, idea generation, market intelligence, idea pressure-testing, cofounder fit, problem sharpening, customer-discovery coaching, signal auditing, rapid experiments, MVP architecture, pricing, outreach, PMF audit, pivot decisions, and on-demand artifact production. Each skill is small, opinionated, and oriented toward a specific failure mode that destroys early-stage startups.
 
 ## The thesis
 
@@ -31,7 +31,7 @@ Six personas, all served by the same system; only the entry point differs.
 
 Built for U.S.-style technology startups (the YC archetype: tech-enabled, venture-fundable, scaling through software). Less applicable to traditional small businesses, services-only firms with no product ambition, and businesses for which Sean Ellis-style PMF is not a meaningful metric.
 
-## What's included in v0.1
+## What's included
 
 ### Plugin: startup-skills-core (2 skills)
 
@@ -42,12 +42,34 @@ Built for U.S.-style technology startups (the YC archetype: tech-enabled, ventur
 
 - **`idea-genesis`** — For founders with no idea. Runs an organic interview track AND a parallel research track on the founder's domain. Surfaces 5–7 candidate idea spaces, each with a named potential customer. Refuses Solution-In-Search-of-a-Problem framings.
 - **`market-intel`** — Independent web research, structured as a brief (pain expressed, customer vocabulary, who's building, what's missing, why-now, tar-pit check). Refuses TAM-as-validation. Called by other skills as a subroutine, or invoked directly.
-- **`idea-pressure-test`** — Steel-mans the idea first, then scores it on Dalton's 4-criteria rubric (market size, founder-market fit, ease of starting, early market feedback) and the YC 10-question framework. Calls `market-intel`. Detects tar pits, schlep blindness, SISP framings. Willing to recommend "kill it."
+- **`idea-pressure-test`** — Steel-mans the idea first, then scores it on Dalton's 4-criteria rubric (market size, founder-market fit, ease of starting, early market feedback) and the YC 10-question framework. Detects tar pits, schlep blindness, SISP framings. Willing to recommend "kill it."
 - **`cofounder-fit`** — Diagnoses team gaps. Applies YC's non-negotiable rules (work together first, near-equal equity, vesting). Produces a 4-week trial protocol on request. Refuses to validate pre-PMF sales hires or contractor v1 builds.
 
-### Reference library (10 documents)
+### Plugin: startup-skills-validation (3 skills)
 
-Shared canon loaded by skills on demand: `tone-and-stance`, `state-document-template`, `state-document-protocol`, `bias-sentinel`, `research-playbook`, `scoring-rubrics`, `tar-pit-detection`, `cofounder-frameworks`, `case-studies`, `external-resources`.
+- **`problem-focus`** — Recursive specificity drill: turns "companies need better X" into "the Head of Sustainability at Series B-C tech startups needs to report Scope 1-3 emissions by week 11 of each quarter." Builds the ICP with buyer/user split. Refuses to proceed if the ICP can't be located online in concentrated form.
+- **`discovery-coach`** — The single most important skill. Two modes: PREPARE (Mom-Test-aligned interview scripts, role-play, behavioral-commitment close) and DEBRIEF (classifies every customer statement against the Evidence Weighting Matrix, applies the seven false-signal patterns, refines hypothesis). Bad interviews produce false confidence — this skill prevents that.
+- **`signal-audit`** — The PMF running score. Refuses to bless build/scale/hire/raise decisions unsupported by behavioral evidence. Computes stage (pre-signal / early signal / converging / Sean Ellis confirmed) and the specific gap to next stage.
+
+### Plugin: startup-skills-execution (4 skills)
+
+- **`rapid-experiments`** — Designs Fake Door / Wizard of Oz / Concierge MVP / pre-order tests matched to the founder's archetype. Refuses B2B-enterprise Fake Door tests. Enforces falsification pre-commitments (success AND kill criteria in writing before launch).
+- **`mvp-architect`** — Ruthless feature-cutting against a single validated hypothesis. Hard 2–6 week deadline. Hair-on-fire early adopter via Seibel's brick test. Refuses to scope a build until `rapid-experiments` has produced signal — or makes the founder explicitly accept the risk.
+- **`pricing-model`** — Charge from day one. Selects revenue model by archetype. Refuses B2B freemium pre-PMF. Refuses free trials when money-back guarantees fit better. Commits a single price into the state document.
+- **`outreach-engine`** — Prospect lists, YC-style cold emails, funnel math backwards from goal, Continuous Launch sequencing. Refuses paid acquisition pre-PMF, sales hires pre-PMF, and press-as-acquisition.
+
+### Plugin: startup-skills-pmf-and-pivot (2 skills)
+
+- **`pmf-audit`** — Full Sean Ellis 40% Rule survey + Rahul Vohra's Superhuman blueprint applied to the founder's own data. HXC segmentation, polarity analysis, fence-sitter conversion, 50/50 engineering split. Freezes scaling and paid acquisition below 40%.
+- **`pivot-decision`** — Dalton's opportunity cost framework + Klein-style pre-mortem. Aggressively counters sunk cost. When pivot is recommended, generates 3–5 scored candidates rooted in what the founder already learned. Refuses chronic pivoting (3+ pivots in 6 months) as productive work.
+
+### Plugin: startup-skills-artifacts (1 skill)
+
+- **`artifact-builder`** — Produces pitch decks (10–12 slide YC format), landing pages (React/HTML), one-pagers, investor emails, demo day scripts, brand briefs. All pulled from the current state document. Refuses pre-signal pitch decks. Marks every thin section so the founder knows what's substantiated vs filled-in.
+
+### Reference library (23 documents)
+
+Shared canon loaded by skills on demand: `tone-and-stance`, `state-document-template`, `state-document-protocol`, `bias-sentinel`, `research-playbook`, `mom-test-principles`, `evidence-weighting-matrix`, `false-signal-detection`, `scoring-rubrics`, `tar-pit-detection`, `pmf-scoring`, `sales-funnel-math`, `validation-techniques`, `landing-page-patterns`, `mvp-examples`, `case-studies`, `email-templates`, `pricing-frameworks`, `cofounder-frameworks`, `tool-recommendations`, `external-resources`, `pitch-deck-structure`, `one-pager-structure`.
 
 ## Install — Claude Code (recommended)
 
@@ -55,7 +77,13 @@ Shared canon loaded by skills on demand: `tone-and-stance`, `state-document-temp
 /plugin marketplace add quinnhall07/startup-skills
 /plugin install startup-skills-core@startup-skills
 /plugin install startup-skills-discovery@startup-skills
+/plugin install startup-skills-validation@startup-skills
+/plugin install startup-skills-execution@startup-skills
+/plugin install startup-skills-pmf-and-pivot@startup-skills
+/plugin install startup-skills-artifacts@startup-skills
 ```
+
+First-time users: install all six. The plugins are modular — install only the ones you need (e.g., a post-launch founder might skip `discovery` and install only `pmf-and-pivot` + `artifacts`) — but for a complete experience, install everything.
 
 After install, start a Claude Code session in your project directory and type:
 
@@ -105,13 +133,10 @@ Full annotated list in `references/external-resources.md`.
 
 ## Status and roadmap
 
-- **v0.1 — Discovery Foundation (current).** `startup-skills-core` + `startup-skills-discovery`. 6 skills, 10 references.
-- **v0.2 — Validation Layer.** Adds `startup-skills-validation` (3 skills: `problem-focus`, `discovery-coach`, `signal-audit`) + references for Mom Test, evidence weighting, false-signal detection.
-- **v0.3 — Execution Layer.** Adds `startup-skills-execution` (4 skills: `rapid-experiments`, `mvp-architect`, `pricing-model`, `outreach-engine`).
-- **v0.4 — PMF + Pivot + Artifacts.** Adds `startup-skills-pmf-and-pivot` (`pmf-audit`, `pivot-decision`) and `startup-skills-artifacts` (`artifact-builder`).
-- **v1.0 — Polish + Evaluation.** Benchmark harness, dogfooded with real founders, walkthrough examples.
+- **v0.4 (current) — Full coded scope.** All 5 plugins shipped: `startup-skills-core`, `startup-skills-discovery`, `startup-skills-validation`, `startup-skills-execution`, `startup-skills-pmf-and-pivot`, `startup-skills-artifacts`. 16 skills, 23 references.
+- **v1.0 — Polish + Evaluation (next).** Per-skill benchmark harness with ~30 test prompts each; dogfooded with 5 real founders; walkthrough examples in `examples/`; description triggering accuracy optimization.
 
-See [`CHANGELOG.md`](./CHANGELOG.md) for release notes.
+See [`CHANGELOG.md`](./CHANGELOG.md) for release notes including the v0.1 → v0.4 progression.
 
 ## License
 

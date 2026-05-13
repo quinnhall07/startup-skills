@@ -2,7 +2,7 @@
   "name": "startup-skills",
   "displayName": "Startup Skills",
   "description": "An Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "quinnhall07",
   "homepage": "https://github.com/quinnhall07/startup-skills",
   "license": "PolyForm-Noncommercial-1.0.0",
@@ -49,6 +49,25 @@
         "./plugins/startup-skills-execution/skills/mvp-architect",
         "./plugins/startup-skills-execution/skills/pricing-model",
         "./plugins/startup-skills-execution/skills/outreach-engine"
+      ],
+      "strict": false
+    },
+    {
+      "name": "startup-skills-pmf-and-pivot",
+      "source": "./plugins/startup-skills-pmf-and-pivot",
+      "description": "PMF measurement (Sean Ellis 40% Rule + Superhuman blueprint) and pivot decisions.",
+      "skills": [
+        "./plugins/startup-skills-pmf-and-pivot/skills/pmf-audit",
+        "./plugins/startup-skills-pmf-and-pivot/skills/pivot-decision"
+      ],
+      "strict": false
+    },
+    {
+      "name": "startup-skills-artifacts",
+      "source": "./plugins/startup-skills-artifacts",
+      "description": "Polished deliverables on demand: pitch decks, landing pages, one-pagers, investor emails.",
+      "skills": [
+        "./plugins/startup-skills-artifacts/skills/artifact-builder"
       ],
       "strict": false
     }
