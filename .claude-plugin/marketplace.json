@@ -30,7 +30,7 @@
         "./plugins/startup-skills-pmf-and-pivot/skills/pivot-decision",
         "./plugins/startup-skills-artifacts/skills/artifact-builder"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-core",
@@ -40,7 +40,7 @@
         "./plugins/startup-skills-core/skills/orientation",
         "./plugins/startup-skills-core/skills/founder-context"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-discovery",
@@ -52,7 +52,7 @@
         "./plugins/startup-skills-discovery/skills/idea-pressure-test",
         "./plugins/startup-skills-discovery/skills/cofounder-fit"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-validation",
@@ -63,7 +63,7 @@
         "./plugins/startup-skills-validation/skills/discovery-coach",
         "./plugins/startup-skills-validation/skills/signal-audit"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-execution",
@@ -75,7 +75,7 @@
         "./plugins/startup-skills-execution/skills/pricing-model",
         "./plugins/startup-skills-execution/skills/outreach-engine"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-pmf-and-pivot",
@@ -85,7 +85,7 @@
         "./plugins/startup-skills-pmf-and-pivot/skills/pmf-audit",
         "./plugins/startup-skills-pmf-and-pivot/skills/pivot-decision"
       ],
-      "strict": false
+      "strict": true
     },
     {
       "name": "startup-skills-artifacts",
@@ -94,7 +94,7 @@
       "skills": [
         "./plugins/startup-skills-artifacts/skills/artifact-builder"
       ],
-      "strict": false
+      "strict": true
     }
   ]
 }
