@@ -76,7 +76,7 @@ Shared canon loaded by skills on demand: `tone-and-stance`, `state-document-temp
 ## Install — Claude Code (recommended)
 
 ```text
-/plugin marketplace add quinnhall07/startup-skills
+/plugin marketplace add https://github.com/quinnhall07/startup-skills.git
 /plugin install startup-skills-core@startup-skills
 /plugin install startup-skills-discovery@startup-skills
 /plugin install startup-skills-validation@startup-skills
