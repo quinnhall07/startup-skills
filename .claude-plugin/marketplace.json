@@ -1,6 +1,5 @@
 {
-  "name": "startup-plugins",
-  "version": "0.4.0",
+  "name": "startup-skills",
   "owner": {
     "name": "quinnhall07"
   },
@@ -9,92 +8,9 @@
   },
   "plugins": [
     {
-      "name": "startup-skills-full",
-      "source": ".",
-      "description": "Complete all-in-one bundle containing all core, discovery, validation, execution, pmf, and artifact skills.",
-      "skills": [
-        "./plugins/startup-skills-core/skills/orientation",
-        "./plugins/startup-skills-core/skills/founder-context",
-        "./plugins/startup-skills-discovery/skills/idea-genesis",
-        "./plugins/startup-skills-discovery/skills/market-intel",
-        "./plugins/startup-skills-discovery/skills/idea-pressure-test",
-        "./plugins/startup-skills-discovery/skills/cofounder-fit",
-        "./plugins/startup-skills-validation/skills/problem-focus",
-        "./plugins/startup-skills-validation/skills/discovery-coach",
-        "./plugins/startup-skills-validation/skills/signal-audit",
-        "./plugins/startup-skills-execution/skills/rapid-experiments",
-        "./plugins/startup-skills-execution/skills/mvp-architect",
-        "./plugins/startup-skills-execution/skills/pricing-model",
-        "./plugins/startup-skills-execution/skills/outreach-engine",
-        "./plugins/startup-skills-pmf-and-pivot/skills/pmf-audit",
-        "./plugins/startup-skills-pmf-and-pivot/skills/pivot-decision",
-        "./plugins/startup-skills-artifacts/skills/artifact-builder"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-core",
-      "source": "./plugins/startup-skills-core",
-      "description": "Essential. Orientation + founder context. Required.",
-      "skills": [
-        "./plugins/startup-skills-core/skills/orientation",
-        "./plugins/startup-skills-core/skills/founder-context"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-discovery",
-      "source": "./plugins/startup-skills-discovery",
-      "description": "Find or pressure-test an idea. Includes market intelligence and cofounder fit.",
-      "skills": [
-        "./plugins/startup-skills-discovery/skills/idea-genesis",
-        "./plugins/startup-skills-discovery/skills/market-intel",
-        "./plugins/startup-skills-discovery/skills/idea-pressure-test",
-        "./plugins/startup-skills-discovery/skills/cofounder-fit"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-validation",
-      "source": "./plugins/startup-skills-validation",
-      "description": "Customer discovery and signal interpretation. The Mom Test applied.",
-      "skills": [
-        "./plugins/startup-skills-validation/skills/problem-focus",
-        "./plugins/startup-skills-validation/skills/discovery-coach",
-        "./plugins/startup-skills-validation/skills/signal-audit"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-execution",
-      "source": "./plugins/startup-skills-execution",
-      "description": "Experiments, MVP scoping, pricing, sales. Build only what's needed to test the hypothesis.",
-      "skills": [
-        "./plugins/startup-skills-execution/skills/rapid-experiments",
-        "./plugins/startup-skills-execution/skills/mvp-architect",
-        "./plugins/startup-skills-execution/skills/pricing-model",
-        "./plugins/startup-skills-execution/skills/outreach-engine"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-pmf-and-pivot",
-      "source": "./plugins/startup-skills-pmf-and-pivot",
-      "description": "PMF measurement (Sean Ellis 40% Rule + Superhuman blueprint) and pivot decisions.",
-      "skills": [
-        "./plugins/startup-skills-pmf-and-pivot/skills/pmf-audit",
-        "./plugins/startup-skills-pmf-and-pivot/skills/pivot-decision"
-      ],
-      "strict": true
-    },
-    {
-      "name": "startup-skills-artifacts",
-      "source": "./plugins/startup-skills-artifacts",
-      "description": "Polished deliverables on demand: pitch decks, landing pages, one-pagers, investor emails.",
-      "skills": [
-        "./plugins/startup-skills-artifacts/skills/artifact-builder"
-      ],
-      "strict": true
+      "name": "startup-skills",
+      "source": "./plugins/startup-skills",
+      "description": "Complete Aggressive Epistemic Auditor for founders: 16 skills from idea to PMF."
     }
   ]
 }

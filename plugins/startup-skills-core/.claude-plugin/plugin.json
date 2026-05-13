@@ -1,9 +1,0 @@
-{
-  "name": "startup-skills-core",
-  "version": "0.1.0",
-  "description": "Essential entry-point skills for the Startup Skills system. Required.",
-  "author": {
-    "name": "quinnhall07"
-  },
-  "license": "PolyForm-Noncommercial-1.0.0"
-}
