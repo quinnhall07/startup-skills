@@ -1,12 +1,14 @@
 ![Version](https://img.shields.io/badge/version-0.4.0-blue)
-![License](https://img.shields.io/badge/license-PolyForm_Noncommercial-orange)
+[![License](https://img.shields.io/badge/license-PolyForm_Noncommercial-orange)](./LICENSE)
 ![Skills](https://img.shields.io/badge/skills-16-green)
 [![Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5f5f)](https://ko-fi.com/quinnhall07)
 ![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-blueviolet)
 [![GitHub Issues](https://img.shields.io/github/issues/quinnhall07/startup-skills)](https://github.com/quinnhall07/startup-skills/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/quinnhall07/startup-skills)](https://github.com/quinnhall07/startup-skills/stargazers)
 
-> Startup Skills is free and always will be. If it saves you a bad pivot or six months of building the wrong thing, consider [buying me a coffee](https://ko-fi.com/quinnhall07).
+> Startup Skills is free for noncommercial use and always will be. If it saves you a bad pivot or six months of building the wrong thing, consider [buying me a coffee](https://ko-fi.com/quinnhall07).
+
+*Want commercial use? [Email me](mailto:quinn.hall.scho@gmail.com).*
 
 # Startup Skills
 
@@ -16,7 +18,7 @@ A Claude Code plugin that turns Claude into an Aggressive Epistemic Auditor for 
 
 ---
 
-## What this is
+## What Is This?
 
 Startup Skills compresses the time between "I have an idea (or no idea)" and "I know whether this is real." It keeps compressing it through customer discovery, MVP design, first customers, and product-market fit measurement. The system is distributed as a GitHub repository structured as a Claude Code plugin; users install with two commands and get a thinking partner who actively scours Reddit, G2, Crunchbase, and job postings while they're talking.
 
@@ -24,11 +26,11 @@ The tone is direct and willing to wound. The system will flatly tell a founder t
 
 16 skills total, plus a shared reference library of canonical methodology. Each skill is small, opinionated, and oriented toward a specific failure mode that destroys early-stage startups.
 
-## The thesis
+## The Thesis
 
 > The most expensive mistake in startups is building something nobody wants. The second most expensive is discovering this after six months instead of six days. Startup Skills compresses that distance — combining the founder's domain intuition and judgment with Claude's ability to research at scale, identify cognitive bias in real time, build validation artifacts in minutes, and pattern-match across thousands of startup stories. The human does what only humans can: have lived expertise, build relationships, make sales calls, commit. Claude does what only Claude can: read the entire internet, never tire of pushing back, structurally enforce evidence over opinion. The system is not a coach in the soft sense. It is an Aggressive Epistemic Auditor whose job is to keep the founder from lying to themselves long enough to find out what's true.
 
-## Who's it for
+## Who Is This For?
 
 Six personas, all served by the same system; only the entry point differs.
 
@@ -41,9 +43,9 @@ Six personas, all served by the same system; only the entry point differs.
 
 Built for U.S.-style technology startups (the YC archetype: tech-enabled, venture-fundable, scaling through software). Less applicable to traditional small businesses, services-only firms, and businesses for which Sean Ellis-style PMF is not a meaningful metric.
 
-## What's included
+## What Is Included?
 
-### The 16 skills
+### The 16 Skills
 
 - **`orientation`** — Entry point. Initializes `STARTUP-STATE.md`, explains the system, routes to the next skill.
 - **`founder-context`** — Captures domain expertise, technical ability, time horizon, archetype, resources, risk tolerance. Runs parallel domain research while interviewing.
@@ -62,9 +64,13 @@ Built for U.S.-style technology startups (the YC archetype: tech-enabled, ventur
 - **`pivot-decision`** — Dalton's opportunity cost + Klein pre-mortem. Aggressively counters sunk cost. Generates 3–5 scored pivot candidates rooted in what the founder already learned.
 - **`artifact-builder`** — Pitch decks, landing pages, one-pagers, investor emails, demo day scripts. Pulled from the state document. Refuses pre-signal pitch decks.
 
-### Reference library (23 documents)
+### Reference Library (23 documents)
 
 `tone-and-stance`, `state-document-template`, `state-document-protocol`, `bias-sentinel`, `research-playbook`, `mom-test-principles`, `evidence-weighting-matrix`, `false-signal-detection`, `scoring-rubrics`, `tar-pit-detection`, `pmf-scoring`, `sales-funnel-math`, `validation-techniques`, `landing-page-patterns`, `mvp-examples`, `case-studies`, `email-templates`, `pricing-frameworks`, `cofounder-frameworks`, `tool-recommendations`, `external-resources`, `pitch-deck-structure`, `one-pager-structure`.
+
+#### Reference Path
+
+It's worth noting that the reference path in the SKILL.md files is tailored for use with Claude Code, not Claude.ai. They all use `${CLAUDE_PLUGIN_ROOT}/references/...` as the path. Claude.ai does not support plugin file paths. However, it will likely be able to recognize an alternative as long as you supply the references in the knowledge base. 
 
 ## Install
 
@@ -85,7 +91,7 @@ Or just describe what you want — "I have an idea, can we pressure-test it?" �
 
 The state document lives at `.claude/startup-state.md` in your project directory. It persists across sessions so you never have to re-introduce yourself. To override the path: set `STARTUP_STATE_PATH=/absolute/path/to/file.md`.
 
-### Installing on claude.ai (alternative)
+### Installing on Claude.ai (alternative, not preferred)
 
 1. Clone or download this repo.
 2. Create a new Claude.ai Project.
@@ -93,7 +99,7 @@ The state document lives at `.claude/startup-state.md` in your project directory
 4. In the project's custom instructions, paste the contents of `references/state-document-protocol.md` and a one-paragraph orientation pointing Claude to the SKILL.md files.
 5. Start a conversation. Claude will surface skills based on the descriptions in the SKILL.md frontmatter.
 
-## Methodology and sources
+## Methodology and Sources
 
 Every framework, scoring rubric, and bias antidote in Startup Skills comes from a named, attributable source.
 
@@ -110,7 +116,7 @@ Every framework, scoring rubric, and bias antidote in Startup Skills comes from 
 
 Full annotated list in `references/external-resources.md`.
 
-## Status and roadmap
+## Status and Roadmap
 
 - **v0.4 (current)** — Full coded scope. 16 skills, 23 references.
 - **v1.0 (next)** — Per-skill benchmark harness; dogfooded with real founders; walkthrough examples in `examples/`; description triggering accuracy optimization.
