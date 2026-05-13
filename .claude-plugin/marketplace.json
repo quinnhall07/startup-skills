@@ -1,0 +1,33 @@
+{
+  "name": "startup-skills",
+  "displayName": "Startup Skills",
+  "description": "An Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides.",
+  "version": "0.1.0",
+  "author": "quinnhall07",
+  "homepage": "https://github.com/quinnhall07/startup-skills",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "plugins": [
+    {
+      "name": "startup-skills-core",
+      "source": "./plugins/startup-skills-core",
+      "description": "Essential. Orientation + founder context. Required.",
+      "skills": [
+        "./plugins/startup-skills-core/skills/orientation",
+        "./plugins/startup-skills-core/skills/founder-context"
+      ],
+      "strict": false
+    },
+    {
+      "name": "startup-skills-discovery",
+      "source": "./plugins/startup-skills-discovery",
+      "description": "Find or pressure-test an idea. Includes market intelligence and cofounder fit.",
+      "skills": [
+        "./plugins/startup-skills-discovery/skills/idea-genesis",
+        "./plugins/startup-skills-discovery/skills/market-intel",
+        "./plugins/startup-skills-discovery/skills/idea-pressure-test",
+        "./plugins/startup-skills-discovery/skills/cofounder-fit"
+      ],
+      "strict": false
+    }
+  ]
+}
