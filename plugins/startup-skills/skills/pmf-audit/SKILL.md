@@ -1,6 +1,7 @@
 ---
 name: pmf-audit
-description: (startup-skills) Use when the founder has an active product with real users and needs to measure product-market fit rigorously. Fires on phrases like "do I have PMF," "Sean Ellis survey," "is this PMF," "40% rule," "should I scale," "I have users but...," "fundraising readiness." Implements the Sean Ellis 40% Rule survey AND Rahul Vohra's Superhuman PMF engineering blueprint. Segments users to the High-Expectation Customer (HXC). Refuses to authorize scaling/paid acquisition until the 40% threshold is met. Re-runs assessment quarterly. Distinguishes leading indicator (Ellis survey) from lagging indicator (Andreessen-style organic pull).
+description: >
+  (startup-skills) Use when the founder has an active product with real users and needs to measure product-market fit. Fires on "do I have PMF," "Sean Ellis survey," "should I scale," or "fundraising readiness." Implements the Sean Ellis 40% Rule and Vohra's Superhuman blueprint. Refuses to authorize scaling or paid acquisition below the 40% threshold.
 ---
 
 # PMF Audit

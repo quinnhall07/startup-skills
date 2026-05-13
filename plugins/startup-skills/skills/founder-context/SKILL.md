@@ -1,6 +1,7 @@
 ---
 name: founder-context
-description: Use this skill to capture founder context — domain expertise, technical ability, time horizon, business archetype, resource reality, risk tolerance, and starting point. Fires on user messages that introduce personal background, professional history, or constraints — phrases like "I work in," "I've been a," "I can/can't code," "I have X months to try this," "I'm doing this solo/with a cofounder." Also fires when a significant context change is reported (left job, found cofounder, raised money). Runs structured intake one question at a time, AND launches parallel web research on the founder's stated domain in the background. Generates the Founder Profile section of the state document and surfaces 2-3 questions only the founder could answer.
+description: >
+  (startup-skills) Use to capture who the founder is: domain expertise, technical ability, time horizon, resources, risk tolerance, and starting point. Fires on phrases like "I work in," "I can't code," "I have X months," "I'm doing this solo," or whenever context changes (left job, found cofounder, raised money). Runs parallel web research on the founder's domain while interviewing.
 ---
 
 # Founder Context

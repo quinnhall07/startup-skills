@@ -1,6 +1,7 @@
 ---
 name: outreach-engine
-description: (startup-skills) Use when the user is ready to recruit first customers, write outreach emails, do sales, or launch publicly. Fires on phrases like "first customers," "cold email," "sales," "how do I get people to buy," "getting traction," "launching," "marketing." Built around Gustav's "do things that don't scale" philosophy: founder does sales personally, manual outreach, charge from day one. Uses market-intel to build prospect lists. Drafts custom outreach using YC's framework (short, plain text, founder-credentialed, specific value prop, clear single CTA). Calculates backwards from goal to outreach volume. Coaches qualifying call structure. Includes the Continuous Launch strategy (iterating across micro-communities). Refuses to recommend paid acquisition pre-PMF.
+description: >
+  (startup-skills) Use when the founder is ready to recruit first customers, write cold emails, or launch. Fires on "first customers," "cold email," "getting traction," or "launching." Builds prospect lists, drafts YC-style outreach, and computes funnel math backwards from goal. Includes the Continuous Launch strategy. Refuses paid acquisition, sales hires, and press-as-acquisition pre-PMF.
 ---
 
 # Outreach Engine

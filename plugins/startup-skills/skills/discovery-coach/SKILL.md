@@ -1,6 +1,7 @@
 ---
 name: discovery-coach
-description: (startup-skills) The single most important skill in the system. Use before AND after every customer conversation. Fires on phrases like "I'm going to interview some users," "I'm talking to a potential customer," "I just got off a call with," "I talked to 5 people," "how should I ask about this," "what should I learn from these conversations," or "I need an interview script." Has two modes: PREPARE (generate Mom-Test-aligned interview scripts, role-play skeptical/distracted interviewees, identify bad questions before they're asked) and DEBRIEF (process what was heard, classify each statement against the Evidence Weighting Matrix, surface false signals, refine hypothesis). Bad interviews are far worse than no interviews because they produce false confidence — this skill prevents that.
+description: >
+  (startup-skills) The most important skill. Use before AND after every customer conversation. Fires on "I'm going to interview users," "I just got off a call," "I need an interview script," or "what should I learn from these conversations." PREPARE mode generates Mom-Test-aligned scripts. DEBRIEF mode classifies every statement by evidence weight, surfaces false signals, and refines the hypothesis.
 ---
 
 # Discovery Coach

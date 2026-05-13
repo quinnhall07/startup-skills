@@ -1,6 +1,7 @@
 ---
 name: cofounder-fit
-description: (startup-skills) Use when the user discusses cofounders, partners, teammates, equity splits, hiring, or solo founder status. Also fires when the founder profile reveals a clear team gap (domain expert without technical ability; technical builder without domain knowledge; either without sales experience). Fires on phrases like "cofounder," "should I do this alone," "find a technical cofounder," "equity split," "vesting," "co-founder matching." Diagnoses team gaps, surfaces YC's rules on cofounder selection (work together first, near-equal equity, vesting non-negotiable), and produces a 4-week cofounder trial protocol. Refuses to validate rushed cofounder choices.
+description: >
+  (startup-skills) Use when the founder discusses cofounders, equity splits, solo vs team, or hiring. Fires on "cofounder," "should I do this alone," "equity split," "vesting," or when the founder profile reveals a clear team gap. Applies YC's rules (work together first, near-equal equity, vesting non-negotiable). Refuses pre-PMF sales hires and contractor v1 builds.
 ---
 
 # Cofounder Fit

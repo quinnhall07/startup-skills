@@ -1,6 +1,7 @@
 ---
 name: artifact-builder
-description: (startup-skills) Use whenever the user explicitly asks for a polished, external-facing deliverable. Fires on phrases like "create a pitch deck," "build me a landing page," "draft a one-pager," "investor email," "demo day deck," "fundraising materials," "make a logo," "produce a brand brief." All artifacts are generated FROM the current state document, reflecting current validated understanding — never speculation. Routes internally to the right format (pptx for decks via the pptx skill if available, React/HTML for landing pages, markdown for one-pagers and emails). Will refuse to produce a polished pitch deck if PMF stage is pre-signal — fundraising on speculation is dishonest. Will flag any sections where the state document is thin so the founder knows what's substantiated vs filled-in.
+description: >
+  (startup-skills) Use when the founder needs a polished external-facing deliverable. Fires on "create a pitch deck," "build a landing page," "draft a one-pager," "investor email," or "demo day deck." All artifacts are pulled from the current state document. Refuses to produce a pitch deck pre-signal. Flags every thin section so the founder knows what is substantiated vs filled-in.
 ---
 
 # Artifact Builder

@@ -1,6 +1,7 @@
 ---
 name: mvp-architect
-description: (startup-skills) Use when behavioral validation is strong enough to justify building real software. Fires on phrases like "time to build," "let's start the MVP," "what should v1 include," "ready to write code," "I have validation, now what." Aggressively scopes the MVP against the single validated hypothesis — what is the absolute minimum that would test it further with real product? Ruthlessly cuts features. Sets a hard 2-6 week deadline. Identifies the hair-on-fire early adopter who will tolerate a crappy v1. Produces an MVP spec document. Refuses to authorize building until rapid-experiments has produced behavioral evidence, OR the founder explicitly accepts the risk of building without it.
+description: >
+  (startup-skills) Use when behavioral validation is strong enough to justify building. Fires on "time to build," "what should v1 include," "ready to write code," or "I have validation, now what." Ruthlessly cuts features against a single validated hypothesis. Sets a hard 2-6 week deadline. Refuses to authorize building until rapid-experiments has produced behavioral signal.
 ---
 
 # MVP Architect

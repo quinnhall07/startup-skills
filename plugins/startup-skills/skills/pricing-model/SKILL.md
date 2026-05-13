@@ -1,6 +1,7 @@
 ---
 name: pricing-model
-description: (startup-skills) Use when the user is thinking about pricing, revenue model, monetization, or business model. Fires on phrases like "what should I charge," "free vs paid," "should I do freemium," "SaaS vs usage-based," "should I charge upfront," "money-back guarantee," "free trial." Forces the founder to commit to charging from day one (Gustav's rule). Selects revenue model from subscription/usage/one-time/marketplace/services-to-product/freemium based on business archetype. Refuses to default to freemium for B2B. Refuses to recommend free trials when money-back guarantees would work better. Sets the first price point and writes it into the state document.
+description: >
+  (startup-skills) Use when the founder is thinking about pricing, revenue model, or monetization. Fires on "what should I charge," "free vs paid," "should I do freemium," or "should I charge upfront." Forces a commit to charging from day one. Refuses B2B freemium pre-PMF. Refuses free trials when money-back guarantees fit better. Writes the committed price into the state document.
 ---
 
 # Pricing Model

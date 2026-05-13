@@ -1,6 +1,7 @@
 ---
 name: idea-pressure-test
-description: (startup-skills) Use when the user has a specific idea they want evaluated, stress-tested, or scored. Fires on phrases like "is this a good idea," "what do you think of [idea]," "should I work on this," "evaluate my idea," or whenever the user pitches a concrete concept. Pulls live market research via market-intel. Scores the idea against the YC 10-question framework AND Dalton's 4-criteria rubric (market size, founder-market fit, ease of starting, early market feedback). Aggressively detects tar pits, schlep blindness, and SISP framings. Produces a clear-eyed scored assessment with the single most important gap to close — and is willing to say "this is a tar pit, kill it" when the evidence supports that.
+description: >
+  (startup-skills) Use when the founder has a specific idea to evaluate. Fires on "is this a good idea," "should I work on this," "evaluate my idea," or whenever a concrete concept is pitched. Steel-mans first, then scores against Dalton's 4-criteria rubric and the YC 10-question framework. Detects tar pits, schlep blindness, and SISP framings. Willing to say "kill it."
 ---
 
 # Idea Pressure Test

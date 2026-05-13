@@ -1,6 +1,7 @@
 ---
 name: idea-genesis
-description: (startup-skills) Use when a founder has no idea, is uncertain between multiple ideas, wants to explore a domain, or is generating new candidates. Fires on phrases like "I have no idea," "what should I build," "I want to start something," "exploring," "brainstorming ideas," or "shopping for ideas." Runs two simultaneous tracks: (1) structured interview through the founder's lived experience, past frustrations, things they wished existed, and weird workarounds they currently use; (2) parallel web research on underserved problems in the founder's stated domain (Reddit, forums, G2 reviews, job postings, failed-startup post-mortems, Indie Hackers). Surfaces 5-7 candidate idea spaces with source attribution. Refuses to entertain Solution-In-Search-of-a-Problem (SISP) framings like "AI is cool, what could I apply it to?"
+description: >
+  (startup-skills) Use when the founder has no idea or is generating candidates. Fires on "I have no idea," "what should I build," "I want to start something," or "brainstorming ideas." Runs an organic interview track alongside parallel web research. Surfaces 5-7 candidate idea spaces. Refuses Solution-In-Search-of-a-Problem framings like "AI is cool, what should I apply it to?"
 ---
 
 # Idea Genesis

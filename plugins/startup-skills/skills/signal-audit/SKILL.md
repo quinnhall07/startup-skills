@@ -1,6 +1,7 @@
 ---
 name: signal-audit
-description: (startup-skills) Use after every new evidence point comes in (interview, sales call, signup data, survey result, usage data), AND before any major decision (build, pivot, hire, raise). Fires on phrases like "is this working," "are we close to PMF," "what's the data saying," "should I build now," or whenever new evidence is presented. Updates the PMF running score by classifying new evidence behaviorally vs attitudinally, applying the 7 false-signal patterns, and computing the current PMF stage. Generates full PMF assessments at decision gates. Refuses to bless decisions that aren't supported by behavioral evidence — diplomatic dishonesty here costs the founder months.
+description: >
+  (startup-skills) Use after new evidence arrives or before any major decision (build, hire, raise, scale). Fires on "is this working," "are we close to PMF," "should I build now," or "what's the data saying." Classifies evidence, applies 7 false-signal patterns, computes PMF stage, and refuses to bless decisions not supported by behavioral evidence.
 ---
 
 # Signal Audit

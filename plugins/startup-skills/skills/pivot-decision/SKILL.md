@@ -1,6 +1,7 @@
 ---
 name: pivot-decision
-description: (startup-skills) Use every 4-6 weeks during active building, OR whenever the founder is stuck, considering quitting, considering a pivot, or doubting direction. Fires on phrases like "should I pivot," "stuck," "this isn't working," "I've been at this for months," "maybe I should try something different," "considering changing direction." Reads the entire state document — evidence log, PMF score, time invested. Runs Dalton's opportunity cost calculation. Runs a Klein-style pre-mortem ("assume this fails — most likely cause?"). Aggressively counteracts sunk cost fallacy. If pivot is recommended: generates 3-5 pivot candidates rooted in what was learned, scored using Dalton's 4-criteria rubric. Identifies pivots that are BOTH higher quality AND easier to start.
+description: >
+  (startup-skills) Use every 4-6 weeks during active building, or whenever the founder is stuck or doubting direction. Fires on "should I pivot," "this isn't working," "I've been at this for months," or "considering changing direction." Runs Dalton's opportunity cost calculation and a Klein-style pre-mortem. Aggressively counters sunk cost. Generates 3-5 scored pivot candidates if a pivot is recommended.
 ---
 
 # Pivot Decision
