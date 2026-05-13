@@ -1,0 +1,4 @@
+.claude/settings.local.json
+.claude/startup-state.md
+*.DS_Store
+Thumbs.db
