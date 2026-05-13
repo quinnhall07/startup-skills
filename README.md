@@ -8,7 +8,7 @@
 
 > Startup Skills is free for noncommercial use and always will be. If it saves you a bad pivot or six months of building the wrong thing, consider [buying me a coffee](https://ko-fi.com/quinnhall07).
 
-*Want commercial use? [Email me](mailto:quinn.hall.scho@gmail.com).*
+*Want commercial use? [Contact me](mailto:quinn.hall.scho@gmail.com).*
 
 # Startup Skills
 
