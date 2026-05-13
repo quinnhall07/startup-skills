@@ -2,6 +2,19 @@
 
 All notable changes to Startup Skills are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
+## [0.2.0] — 2026-05-12
+
+### Added
+- `startup-skills-validation` plugin (3 skills): `problem-focus`, `discovery-coach` (PREPARE + DEBRIEF modes), `signal-audit`.
+- Reference library additions: `mom-test-principles`, `evidence-weighting-matrix`, `false-signal-detection`, `email-templates`.
+- `.claude-plugin/marketplace.json` updated to register the new plugin; version bumped to 0.2.0.
+
+### Resolved
+- v0.1 forward-references to `evidence-weighting-matrix.md`, `mom-test-principles.md`, and `false-signal-detection.md` now resolve to actual files. SKILL.md files in `startup-skills-core` and `startup-skills-discovery` that cited these references (notably via `bias-sentinel.md` and `state-document-template.md`) now have full backing.
+
+### Known limitations of v0.2
+- Execution, PMF, pivot, and artifact plugins still pending — see roadmap in README. Skills that forward-reference `pmf-scoring.md`, `validation-techniques.md`, `landing-page-patterns.md`, `mvp-examples.md`, `pricing-frameworks.md`, `sales-funnel-math.md`, `tool-recommendations.md`, `pitch-deck-structure.md`, and `one-pager-structure.md` will resolve when v0.3 and v0.4 ship.
+
 ## [0.1.0] — 2026-05-12
 
 ### Added
