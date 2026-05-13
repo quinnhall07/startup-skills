@@ -1,6 +1,12 @@
-[![Support on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/quinnhall07)
+![Version](https://img.shields.io/badge/version-0.4.0-blue)
+![License](https://img.shields.io/badge/license-PolyForm_Noncommercial-orange)
+![Skills](https://img.shields.io/badge/skills-16-green)
+[![Ko-fi](https://img.shields.io/badge/support-Ko--fi-ff5f5f)](https://ko-fi.com/quinnhall07)
+![Claude Code](https://img.shields.io/badge/Claude_Code-plugin-blueviolet)
+[![GitHub Issues](https://img.shields.io/github/issues/quinnhall07/startup-skills)](https://github.com/quinnhall07/startup-skills/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/quinnhall07/startup-skills)](https://github.com/quinnhall07/startup-skills/stargazers)
 
-> Startup Skills is free and always will be. If it saves you a bad pivot or six months of building the wrong thing, consider buying me a coffee.
+> Startup Skills is free and always will be. If it saves you a bad pivot or six months of building the wrong thing, consider [buying me a coffee](https://ko-fi.com/quinnhall07).
 
 # Startup Skills
 
