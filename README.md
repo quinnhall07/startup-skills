@@ -1,3 +1,5 @@
+[![ko-fi](https://ko-fi.com)](https://ko-fi.com/quinnhall07)
+
 # Startup Skills
 
 A Claude Code plugin marketplace that turns Claude into an Aggressive Epistemic Auditor for founders. Idea to PMF, with Y Combinator methodology, the Mom Test, the Lean Startup, and behavioral economics applied as structural overrides.
