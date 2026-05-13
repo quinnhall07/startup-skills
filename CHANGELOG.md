@@ -2,6 +2,22 @@
 
 All notable changes to Startup Skills are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/); versioning follows [SemVer](https://semver.org/).
 
+## [0.3.0] — 2026-05-12
+
+### Added
+- `startup-skills-execution` plugin (4 skills): `rapid-experiments`, `mvp-architect`, `pricing-model`, `outreach-engine`.
+- Reference library additions: `validation-techniques`, `landing-page-patterns`, `mvp-examples`, `pricing-frameworks`, `sales-funnel-math`, `tool-recommendations`.
+- `.claude-plugin/marketplace.json` updated to register the new plugin; version bumped to 0.3.0.
+
+### Behavior changes
+- `rapid-experiments` refuses to design Fake Door tests for B2B-enterprise archetypes (trust damage).
+- `mvp-architect` gates feature scoping behind a `rapid-experiments` behavioral signal — or requires explicit risk acknowledgment.
+- `pricing-model` refuses B2B freemium pre-PMF and refuses to defer the pricing decision.
+- `outreach-engine` refuses paid acquisition pre-PMF, sales hire pre-PMF, and press/PR-as-acquisition.
+
+### Known limitations of v0.3
+- PMF, pivot, and artifact plugins still pending — see roadmap in README. Forward-references to `pmf-scoring.md`, `pitch-deck-structure.md`, and `one-pager-structure.md` from current skills will resolve in v0.4.
+
 ## [0.2.0] — 2026-05-12
 
 ### Added
