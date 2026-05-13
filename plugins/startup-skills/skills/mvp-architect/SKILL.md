@@ -16,12 +16,12 @@ Ruthless feature-cutting against a single validated hypothesis. Hard 2–6 week 
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — especially planning fallacy, perfectionism, feature creep, "fake Steve Jobs" syndrome.
-- `references/mvp-examples.md` — Airbnb, Twitch, Stripe, DoorDash, Dropbox, Buffer.
-- `references/case-studies.md` — supporting context.
-- `references/tool-recommendations.md` — for v1 stack recommendations.
-- `references/external-resources.md` — Michael Seibel *How to Build an MVP*, Eric Ries.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — especially planning fallacy, perfectionism, feature creep, "fake Steve Jobs" syndrome.
+- `${CLAUDE_PLUGIN_ROOT}/references/mvp-examples.md` — Airbnb, Twitch, Stripe, DoorDash, Dropbox, Buffer.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — supporting context.
+- `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md` — for v1 stack recommendations.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Michael Seibel *How to Build an MVP*, Eric Ries.
 
 ## State Document Protocol
 
@@ -42,7 +42,7 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 5. **Cut with extreme prejudice** using YAGNI-against-hypothesis. For each feature, ask one question: *"Does the hypothesis test require this feature, or is this for some hypothetical v2 user?"* Cut every feature where the answer is "v2." Michael Seibel's framing: "Be desperate to leave features out."
 
-6. **Reference canonical narrow MVPs** from `references/mvp-examples.md` — at minimum cite Airbnb v1 (no payments, no maps, only conferences, air mattresses), Twitch v1 (one streamer, one page, no game-specific features), Stripe v1 (manual nightly faxes, only YC startups). The pattern: ridiculously narrow, ridiculously crappy. Ship it.
+6. **Reference canonical narrow MVPs** from `${CLAUDE_PLUGIN_ROOT}/references/mvp-examples.md` — at minimum cite Airbnb v1 (no payments, no maps, only conferences, air mattresses), Twitch v1 (one streamer, one page, no game-specific features), Stripe v1 (manual nightly faxes, only YC startups). The pattern: ridiculously narrow, ridiculously crappy. Ship it.
 
 7. **Identify the hair-on-fire early adopter** — Michael Seibel's brick metaphor: the customer whose pain is acute enough they'll use a brick if the brick solves the problem. Specific named role, specific named situation. NOT the mainstream customer. If the founder can't name a hair-on-fire ICP, the MVP is premature; return to `problem-focus`.
 
@@ -54,7 +54,7 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 10. **Set a hard timeline — 2 to 6 weeks.** Anything longer is not an MVP; it's a v1. If the cut feature list cannot ship in 6 weeks with current resources, cut more features. If still can't, the hypothesis test is too ambitious; scope back.
 
-11. **Reference Class Forecasting** per `references/bias-sentinel.md`. The founder will underestimate timeline. Force them to look at 3–5 comparable MVPs and use the historical median, not their optimistic gut estimate. If uncertain, multiply by ~3.
+11. **Reference Class Forecasting** per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`. The founder will underestimate timeline. Force them to look at 3–5 comparable MVPs and use the historical median, not their optimistic gut estimate. If uncertain, multiply by ~3.
 
 12. **Bias sentinel pass.** Especially:
     - **Planning fallacy.** Force outside-view timeline.
@@ -69,7 +69,7 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
     - **Must-have features** (the cut list)
     - **Explicitly excluded features** (so the founder doesn't quietly add them back)
     - **Timeline** (2–6 weeks max, with weekly milestones)
-    - **Technical stack recommendation** (tool-agnostic with options from `references/tool-recommendations.md` — typically Next.js + Vercel + Supabase or Postgres + Stripe for SaaS; native + Firebase for mobile)
+    - **Technical stack recommendation** (tool-agnostic with options from `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md` — typically Next.js + Vercel + Supabase or Postgres + Stripe for SaaS; native + Firebase for mobile)
     - **Launch plan** (who the first 5 customers are by name, how they'll be onboarded — Stripe Collison-style)
 
 14. **Explicit handoff.** When in Claude Code with the `superpowers` plugin installed, invoke `brainstorming` with the MVP spec to plan the actual build. When in claude.ai, produce a clean spec the user can hand to a developer or paste into Claude Code.
@@ -104,4 +104,4 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Sharp on feature cuts. Use Seibel's "desperate to leave features out" framing. Refuse the founder's natural urge to add the "obvious" v2 features back during scoping.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Sharp on feature cuts. Use Seibel's "desperate to leave features out" framing. Refuse the founder's natural urge to add the "obvious" v2 features back during scoping.

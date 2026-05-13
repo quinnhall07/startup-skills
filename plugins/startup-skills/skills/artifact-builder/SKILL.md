@@ -17,13 +17,13 @@ Only on explicit request. The system never auto-generates artifacts; the founder
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/pitch-deck-structure.md` — 10–12 slide YC format; what never to include.
-- `references/landing-page-patterns.md` — Fake Door / signup page anatomy.
-- `references/one-pager-structure.md` — async one-page format.
-- `references/email-templates.md` — outreach patterns including investor email shapes.
-- `references/case-studies.md` — for anchor examples.
-- `references/bias-sentinel.md` — pitch-deck-as-fiction, false traction claims, vanity metrics.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/pitch-deck-structure.md` — 10–12 slide YC format; what never to include.
+- `${CLAUDE_PLUGIN_ROOT}/references/landing-page-patterns.md` — Fake Door / signup page anatomy.
+- `${CLAUDE_PLUGIN_ROOT}/references/one-pager-structure.md` — async one-page format.
+- `${CLAUDE_PLUGIN_ROOT}/references/email-templates.md` — outreach patterns including investor email shapes.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for anchor examples.
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — pitch-deck-as-fiction, false traction claims, vanity metrics.
 
 ## State Document Protocol
 
@@ -39,14 +39,14 @@ Read `STARTUP-STATE.md` thoroughly — this skill *consumes* the state to produc
 
    - **Pitch deck:**
      - **If PMF stage is pre-signal: REFUSE.** State the reason directly: "Pre-signal pitch decks are speculative fiction. Serious investors will see through it; the time would be better spent on `discovery-coach` to lift the evidence quality. I can produce a one-pager instead — that's appropriate at this stage. Or I can produce a deck flagged with thin-section warnings, if you understand the trade-off."
-     - **If PMF is early-signal or higher:** produce a 10–12 slide YC-style deck per `references/pitch-deck-structure.md`. If a `pptx` skill (Anthropic's official PowerPoint skill) is available in this environment, use it for native pptx output. Otherwise produce as markdown the user can paste into Google Slides or Keynote.
+     - **If PMF is early-signal or higher:** produce a 10–12 slide YC-style deck per `${CLAUDE_PLUGIN_ROOT}/references/pitch-deck-structure.md`. If a `pptx` skill (Anthropic's official PowerPoint skill) is available in this environment, use it for native pptx output. Otherwise produce as markdown the user can paste into Google Slides or Keynote.
      - Pull each slide's content from the state: problem from Current Hypothesis + ICP; solution from One-Liner; traction from Evidence Log + PMF Running Score; market from Competitive Landscape + bottom-up math from Pricing × ICP count; business model from Pricing; team from Founder Profile + Team; ask from a question to the user ("how much are you raising, for what milestones?").
 
-   - **Landing page:** build as React or static HTML per `references/landing-page-patterns.md`. Single-page, clear value prop, single CTA. Mobile-responsive. Tailwind for styling. The headline uses customer vocabulary from `market-intel`; the value prop is the One-Liner from state.
+   - **Landing page:** build as React or static HTML per `${CLAUDE_PLUGIN_ROOT}/references/landing-page-patterns.md`. Single-page, clear value prop, single CTA. Mobile-responsive. Tailwind for styling. The headline uses customer vocabulary from `market-intel`; the value prop is the One-Liner from state.
 
-   - **One-pager:** markdown per `references/one-pager-structure.md`. Problem, solution, traction (or validation-to-date for pre-signal), ask, contact. Single page, ~400–500 words.
+   - **One-pager:** markdown per `${CLAUDE_PLUGIN_ROOT}/references/one-pager-structure.md`. Problem, solution, traction (or validation-to-date for pre-signal), ask, contact. Single page, ~400–500 words.
 
-   - **Investor email / cold email:** draft to a specific named recipient using `references/email-templates.md`. Customize the credibility line and value prop. 50–100 words, plain text, single CTA. Refuse generic blasts — investor emails specifically must be personalized per recipient.
+   - **Investor email / cold email:** draft to a specific named recipient using `${CLAUDE_PLUGIN_ROOT}/references/email-templates.md`. Customize the credibility line and value prop. 50–100 words, plain text, single CTA. Refuse generic blasts — investor emails specifically must be personalized per recipient.
 
    - **Demo day script:** 2-minute spoken script with slide cues. Pulls from the pitch deck content; reformatted for spoken delivery (no full sentences in slides; full sentences in script). Practice runtime ≤120 seconds.
 
@@ -101,4 +101,4 @@ Whichever skill the founder was in before invoking this one. Artifact-builder is
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Direct on refusals (pre-signal pitch decks, vanity metrics). When marking thin sections, do not soften — the marks are the value. A polished artifact with unmarked thin sections is worse than a rougher artifact that's honest about what's missing.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Direct on refusals (pre-signal pitch decks, vanity metrics). When marking thin sections, do not soften — the marks are the value. A polished artifact with unmarked thin sections is worse than a rougher artifact that's honest about what's missing.

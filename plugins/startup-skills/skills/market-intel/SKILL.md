@@ -15,10 +15,10 @@ Independent web research as a structured brief — pain expressed, exact custome
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/research-playbook.md` — query templates and source trust ladder.
-- `references/tar-pit-detection.md` — to run the tar-pit check on any idea-space topic.
-- `references/case-studies.md` — to surface real-company anchors when relevant.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md` — query templates and source trust ladder.
+- `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md` — to run the tar-pit check on any idea-space topic.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — to surface real-company anchors when relevant.
 
 ## State Document Protocol
 
@@ -28,7 +28,7 @@ Read `STARTUP-STATE.md` to know the founder's archetype and current focus. Updat
 
 1. **Receive a topic** from the calling skill, or extract from the user's direct request. The topic is one of: a domain ("dental scheduling"), a problem statement ("emissions reporting for series-B startups"), a customer segment ("operations leads at construction firms"), or a named company ("PlanGrid").
 
-2. **Construct 5–10 queries** across the seven categories in `references/research-playbook.md`. Required coverage: at least one query per category from forum pain, review complaints, job posting analysis, failed-startup retrospectives, and community language mapping. Additional queries fill out funding activity and adjacent communities when relevant.
+2. **Construct 5–10 queries** across the seven categories in `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md`. Required coverage: at least one query per category from forum pain, review complaints, job posting analysis, failed-startup retrospectives, and community language mapping. Additional queries fill out funding activity and adjacent communities when relevant.
 
 3. **Execute searches.** Use parallel `WebSearch` where possible. Then pick the 2–3 highest-signal results (high-engagement Reddit threads, specific G2/Capterra reviews, substantive post-mortems) and `WebFetch` them for substance — do not rely on snippets.
 
@@ -39,7 +39,7 @@ Read `STARTUP-STATE.md` to know the founder's archetype and current focus. Updat
    - **What's missing.** Gaps in existing solutions, drawn directly from negative reviews and failed-startup post-mortems.
    - **Why-now.** Any recent change — regulation, technology, market shift, demographic — that opens this. If none found, say so explicitly. "No discoverable why-now" is a signal in itself.
    - **Failed attempts.** Post-mortems found, with structural reasons. If three or more failed for the same reason, escalate to **tar-pit warning**.
-   - **Tar-pit check.** Cross-reference against `references/tar-pit-detection.md`. If the topic matches a known tar pit pattern, name it and explain why.
+   - **Tar-pit check.** Cross-reference against `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md`. If the topic matches a known tar pit pattern, name it and explain why.
 
 5. **Refuse TAM-as-validation.** If during research you encounter top-down TAM figures ("the global X market is $XB"), do not include them in the brief. State explicitly: "TAM excluded — this brief weighs whether 50 specific desperate users exist, not whether the market is theoretically large."
 
@@ -68,4 +68,4 @@ Read `STARTUP-STATE.md` to know the founder's archetype and current focus. Updat
 
 ## Tone
 
-Brisk. No editorializing inside the brief — let the verbatim quotes speak. Editorial happens in the calling skill's response, not here. Per `references/tone-and-stance.md`.
+Brisk. No editorializing inside the brief — let the verbatim quotes speak. Editorial happens in the calling skill's response, not here. Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`.

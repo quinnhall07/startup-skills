@@ -17,13 +17,13 @@ Designs behavioral validation experiments matched to the founder's archetype. Re
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — perfectionism-as-procrastination, fake-launch syndrome, HARKing.
-- `references/validation-techniques.md` — the technique matrix by archetype.
-- `references/landing-page-patterns.md` — for Fake Door / signup page design.
-- `references/evidence-weighting-matrix.md` — to specify expected signal weight before deployment.
-- `references/case-studies.md` — Stripe Collison installation, DoorDash manual delivery, Dropbox video.
-- `references/external-resources.md` — Eric Ries, PG *Do Things That Don't Scale*, Michael Seibel.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — perfectionism-as-procrastination, fake-launch syndrome, HARKing.
+- `${CLAUDE_PLUGIN_ROOT}/references/validation-techniques.md` — the technique matrix by archetype.
+- `${CLAUDE_PLUGIN_ROOT}/references/landing-page-patterns.md` — for Fake Door / signup page design.
+- `${CLAUDE_PLUGIN_ROOT}/references/evidence-weighting-matrix.md` — to specify expected signal weight before deployment.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — Stripe Collison installation, DoorDash manual delivery, Dropbox video.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Eric Ries, PG *Do Things That Don't Scale*, Michael Seibel.
 
 ## State Document Protocol
 
@@ -35,7 +35,7 @@ Read `STARTUP-STATE.md`; pull hypothesis, riskiest assumption, ICP, business arc
 
 2. **Identify the riskiest assumption that blocks progress.** From `problem-focus` if it ran, otherwise extract from the current hypothesis. The experiment must test this *one specific* assumption. If the founder wants to test five things, refuse — design one test for the most-blocking one.
 
-3. **Apply archetype guardrails** from `references/validation-techniques.md`:
+3. **Apply archetype guardrails** from `${CLAUDE_PLUGIN_ROOT}/references/validation-techniques.md`:
    - **B2B enterprise (Fortune 500, regulated):** Fake Door tests damage trust. The skill REFUSES to design one. Use Concierge MVP framed as "high-touch pilot" or "white-glove onboarding."
    - **B2B SMB / devtools:** Either Fake Door or Concierge. Fake Door acceptable if framed as "early access."
    - **Consumer SaaS / mobile:** Aggressive Fake Door / Wizard of Oz deployment.
@@ -46,7 +46,7 @@ Read `STARTUP-STATE.md`; pull hypothesis, riskiest assumption, ICP, business arc
    - **Type** (Fake Door / Wizard of Oz / Concierge / Pre-order / Cold outreach batch).
    - **What it tests** — the riskiest assumption, named explicitly.
    - **Time to deploy** — target 1–7 days.
-   - **Signal quality** — expected weight per `references/evidence-weighting-matrix.md`. E.g., Fake Door produces 0.4 per email; Concierge with payment produces 0.8–1.0; Pre-order with refundable deposit produces 0.8.
+   - **Signal quality** — expected weight per `${CLAUDE_PLUGIN_ROOT}/references/evidence-weighting-matrix.md`. E.g., Fake Door produces 0.4 per email; Concierge with payment produces 0.8–1.0; Pre-order with refundable deposit produces 0.8.
    - **Cost** — dollars and founder hours.
 
 5. **Pre-commit success criterion.** "The experiment succeeds if X people do Y by date Z." Specific numbers. Examples:
@@ -57,7 +57,7 @@ Read `STARTUP-STATE.md`; pull hypothesis, riskiest assumption, ICP, business arc
 6. **Pre-commit kill criterion.** "We will kill or pivot if X people do not do Y by date Z." Symmetric to success. Both go into `STARTUP-STATE.md` BEFORE deployment.
 
 7. **Build the artifact on request only.** Offer once: "I can build the [page / outreach batch / Concierge offer] for you. Say the word." Examples:
-   - **Fake Door page:** generate HTML/React per `references/landing-page-patterns.md`. Single CTA. Email + intent capture.
+   - **Fake Door page:** generate HTML/React per `${CLAUDE_PLUGIN_ROOT}/references/landing-page-patterns.md`. Single CTA. Email + intent capture.
    - **Wizard of Oz frontend:** a realistic-looking UI; specify which backend operations the founder will manually perform.
    - **Concierge offer:** templated outreach message offering manual delivery with a specific price.
    - **Pre-order page:** landing page with Stripe payment intent capture and refund terms.
@@ -67,7 +67,7 @@ Read `STARTUP-STATE.md`; pull hypothesis, riskiest assumption, ICP, business arc
 9. **Bias sentinel pass.** Especially:
    - **Perfectionism-as-procrastination.** The founder will want to polish the experiment artifact. Refuse — ship rough. The point is signal, not aesthetics.
    - **Fake-launch syndrome.** Treating the experiment as a real launch. It's not. It's an information-gathering tool with a kill criterion.
-   - **Inflating expected outcomes.** The founder may set the success criterion at "50 signups in week 1" when their realistic ceiling is 5. Force reference-class forecasting per `references/bias-sentinel.md`.
+   - **Inflating expected outcomes.** The founder may set the success criterion at "50 signups in week 1" when their realistic ceiling is 5. Force reference-class forecasting per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`.
 
 10. **Surface Stripe's Collison Installation pattern.** Manually install the experiment for the first 5 users yourself. Do things that don't scale (PG essay). The data quality from white-glove onboarding is dramatically higher than self-serve at this stage.
 
@@ -100,4 +100,4 @@ Read `STARTUP-STATE.md`; pull hypothesis, riskiest assumption, ICP, business arc
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Direct on refusals (B2B-enterprise Fake Door, perfectionism, five-things-at-once). The kill criterion is the load-bearing artifact; insist on it.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Direct on refusals (B2B-enterprise Fake Door, perfectionism, five-things-at-once). The kill criterion is the load-bearing artifact; insist on it.

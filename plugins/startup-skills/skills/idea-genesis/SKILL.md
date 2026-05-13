@@ -18,12 +18,12 @@ Do NOT activate when the founder is already pressure-testing a specific idea —
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — schlep blindness, false consensus, anchoring.
-- `references/research-playbook.md` — for the parallel research track.
-- `references/tar-pit-detection.md` — to flag obvious tar pits as candidates surface.
-- `references/case-studies.md` — for pattern-matching candidates to known structures.
-- `references/external-resources.md` — for the right essays/videos to surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — schlep blindness, false consensus, anchoring.
+- `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md` — for the parallel research track.
+- `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md` — to flag obvious tar pits as candidates surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for pattern-matching candidates to known structures.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for the right essays/videos to surface.
 
 ## State Document Protocol
 
@@ -46,7 +46,7 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
 
    Wait between each. The order matters: 1–4 surface lived pain; 5 reframes through wish-it-existed; 6 specifically targets schlep blindness; 7 expands to second-degree network.
 
-4. **Research track — parallel, automatic.** As soon as the founder's domain is named (likely from Q1), launch 5–7 searches via `references/research-playbook.md`. Required search shape:
+4. **Research track — parallel, automatic.** As soon as the founder's domain is named (likely from Q1), launch 5–7 searches via `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md`. Required search shape:
    - `site:reddit.com {domain} frustration`
    - `{domain} G2 reviews low rating` (substitute a known competitor if one was mentioned)
    - `Indie Hackers {domain}` / `site:indiehackers.com {domain}`
@@ -61,12 +61,12 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
    - Bad form: "Make dentistry better." Reject candidates this vague; rewrite.
    For each candidate, name *one specific potential customer*: a named role, a named company, or — best — a named human the founder already knows who fits the profile.
 
-6. **Bias sentinel pass per `references/bias-sentinel.md`.** Watch for:
+6. **Bias sentinel pass per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`.** Watch for:
    - **Schlep blindness** — if the founder dismisses any of the candidates because they're boring or hard, surface that bias by name and don't let them quietly drop the candidate without engaging.
    - **False consensus** — if a candidate is framed as "everyone has this problem," demand specificity.
    - **Anchoring** — if the founder locks onto the first candidate, force them to weigh at least three before committing.
 
-7. **Surface Dalton's three counter-signals.** From `references/tar-pit-detection.md` and case studies: "Three things that make ideas seem bad but actually make them good — (1) hard to get started; (2) boring space; (3) existing competitors. Take the candidates with those signals seriously, not less seriously."
+7. **Surface Dalton's three counter-signals.** From `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md` and case studies: "Three things that make ideas seem bad but actually make them good — (1) hard to get started; (2) boring space; (3) existing competitors. Take the candidates with those signals seriously, not less seriously."
 
 8. **Ask the founder to pick 2–3.** "Which 2–3 resonate most? We'll take those to `idea-pressure-test`."
 
@@ -98,4 +98,4 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Hard on candidate quality, not on the founder. Use Dalton's framings ("existing competitors is usually a good sign," "boring + tedious is the moat") at the natural moments. Do not soften when refusing SISP framings.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Hard on candidate quality, not on the founder. Use Dalton's framings ("existing competitors is usually a good sign," "boring + tedious is the moat") at the natural moments. Do not soften when refusing SISP framings.

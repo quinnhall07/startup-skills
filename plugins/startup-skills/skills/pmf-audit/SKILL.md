@@ -18,11 +18,11 @@ If the founder has no deployed product or no qualifying users yet, route back to
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — especially surveying the wrong cohort, building for "Not Disappointed" cohort, fundraising before 40%.
-- `references/pmf-scoring.md` — full Sean Ellis + Vohra workflow.
-- `references/case-studies.md` — Superhuman 22% → 58% case.
-- `references/external-resources.md` — Vohra First Round Review, Ellis posts, Andreessen.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — especially surveying the wrong cohort, building for "Not Disappointed" cohort, fundraising before 40%.
+- `${CLAUDE_PLUGIN_ROOT}/references/pmf-scoring.md` — full Sean Ellis + Vohra workflow.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — Superhuman 22% → 58% case.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Vohra First Round Review, Ellis posts, Andreessen.
 
 ## State Document Protocol
 
@@ -33,7 +33,7 @@ Read `STARTUP-STATE.md`. Confirm there is an active product with qualifying user
 1. **Read state. Confirm prerequisites.** There must be a product with ≥40 active users who have used it 2+ times in the last 14 days. If not, stop and route: `signal-audit` for pre-product evidence; `discovery-coach` for more interviews.
 
 2. **If the user hasn't run the Sean Ellis survey:**
-   - Design the survey per `references/pmf-scoring.md`. Core question, four options, the active-user filter.
+   - Design the survey per `${CLAUDE_PLUGIN_ROOT}/references/pmf-scoring.md`. Core question, four options, the active-user filter.
    - Recommend tools: Tally (free) or Typeform for external delivery; Userpilot or Intercom for in-app.
    - Sample size: 40+ valid responses minimum; aim for 100+.
    - Help the founder write the email sending users to the survey — short, founder-personal, single button.
@@ -45,16 +45,16 @@ Read `STARTUP-STATE.md`. Confirm there is an active product with qualifying user
    - **≥ 40%:** significant. Leading-indicator threshold met. Authorize scaling experiments. Recommend continuing the survey quarterly.
    - **< 40%:** the system FREEZES scaling and paid acquisition. State directly: "Below 40%. Scaling and paid acquisition are off the table until we lift this. We're returning to Build-Measure-Learn."
 
-4. **Apply Vohra's Superhuman blueprint** per `references/pmf-scoring.md`.
+4. **Apply Vohra's Superhuman blueprint** per `${CLAUDE_PLUGIN_ROOT}/references/pmf-scoring.md`.
    - **Segment to the HXC.** Cross-tabulate "Very Disappointed" cohort by role, company size, industry, use frequency, geography. Find the segment with the highest internal "Very Disappointed" %. That's the High-Expectation Customer. Write the HXC definition into `STARTUP-STATE.md` Competitive Landscape under "HXC."
    - **Analyze polarity.** Ask the "Very Disappointed" cohort the open-ended follow-up: "What is the main benefit you receive?" Aggregate the verbatim answers. The dominant theme is the core value prop. Superhuman's was speed; the founder's might be different. Write the theme into `STARTUP-STATE.md` One-Liner (Current).
    - **Convert fence-sitters.** Ask the "Somewhat Disappointed" cohort: "What is holding you back from loving this?" Aggregate. The dominant themes become the next product roadmap.
    - **Ignore the rest.** "Not Disappointed" feedback is discarded. State this directly: "Don't build for the Not-Disappointed cohort — it dilutes the product."
    - **50/50 split.** 50% engineering on expanding HXC value; 50% on converting fence-sitters. Apply this split until the next quarterly re-run.
 
-5. **Surface the Andreessen lagging-indicator complement** per `references/pmf-scoring.md`. Look for: support overwhelmed, organic word-of-mouth, peer-to-peer referrals, servers melting. If the Ellis score is high but these are absent after 6+ months, examine the HXC's TAM — the cohort may be too small to produce company-level signal.
+5. **Surface the Andreessen lagging-indicator complement** per `${CLAUDE_PLUGIN_ROOT}/references/pmf-scoring.md`. Look for: support overwhelmed, organic word-of-mouth, peer-to-peer referrals, servers melting. If the Ellis score is high but these are absent after 6+ months, examine the HXC's TAM — the cohort may be too small to produce company-level signal.
 
-6. **Pre-mortem prompt at every full audit** (per `references/bias-sentinel.md` structural override). "Imagine it's 12 months from now and the company has stalled at this PMF score. Write the autopsy. What was the cause? What evidence would have predicted it?" Use the answer to refine the HXC or the polarity analysis.
+6. **Pre-mortem prompt at every full audit** (per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` structural override). "Imagine it's 12 months from now and the company has stalled at this PMF score. Write the autopsy. What was the cause? What evidence would have predicted it?" Use the answer to refine the HXC or the polarity analysis.
 
 7. **Bias sentinel pass.** Especially:
    - **Surveying the wrong cohort.** Including inactive users suppresses the score. Including signups who never experienced value suppresses it. Re-filter if necessary.
@@ -97,4 +97,4 @@ Per step 9. State explicitly.
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Sharp at the freeze decision (the score is below 40% and the founder wants to scale anyway). Vohra's blueprint is operational; treat it as the engine, not a one-time event.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Sharp at the freeze decision (the score is below 40% and the founder wants to scale anyway). Vohra's blueprint is operational; treat it as the engine, not a one-time event.

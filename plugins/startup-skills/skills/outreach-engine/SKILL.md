@@ -15,13 +15,13 @@ Founder-led, do-things-that-don't-scale outreach. Built around Gustav Alstromer'
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — launch fallacy, networking-as-procrastination.
-- `references/email-templates.md` — YC patterns (warm intro, cold to role, cold to founder).
-- `references/sales-funnel-math.md` — realistic conversion rates, backwards math.
-- `references/tool-recommendations.md` — Apollo, Hunter, HubSpot, Pipedrive, close.com.
-- `references/case-studies.md` — Stripe Collison installation, Airbnb manual outreach, DoorDash founder-as-driver.
-- `references/external-resources.md` — Gustav, Kat Manalac, PG, Lenny.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — launch fallacy, networking-as-procrastination.
+- `${CLAUDE_PLUGIN_ROOT}/references/email-templates.md` — YC patterns (warm intro, cold to role, cold to founder).
+- `${CLAUDE_PLUGIN_ROOT}/references/sales-funnel-math.md` — realistic conversion rates, backwards math.
+- `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md` — Apollo, Hunter, HubSpot, Pipedrive, close.com.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — Stripe Collison installation, Airbnb manual outreach, DoorDash founder-as-driver.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Gustav, Kat Manalac, PG, Lenny.
 
 ## State Document Protocol
 
@@ -34,14 +34,14 @@ Read `STARTUP-STATE.md`; pull ICP, pricing, MVP/Experiment plan. Update Active E
 2. **Invoke `market-intel`** to find specific instances of the ICP if not already done. Pull customer vocabulary; you'll reuse it in the outreach.
 
 3. **Prospect list construction.**
-   - **For B2B:** build a list of 50–100 named individuals. Use LinkedIn search with the ICP's exact role + company size + tech stack. Tools per `references/tool-recommendations.md`: Apollo.io for list-building, Hunter.io for email finding. Warm network first per Gustav's order of difficulty:
+   - **For B2B:** build a list of 50–100 named individuals. Use LinkedIn search with the ICP's exact role + company size + tech stack. Tools per `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md`: Apollo.io for list-building, Hunter.io for email finding. Warm network first per Gustav's order of difficulty:
      1. Personal network (current and ex-colleagues, founder friends).
      2. Startups (especially YC alumni if you have access).
      3. Small companies (10–200 employees).
      4. Large companies.
    - **For B2C:** define 3–5 acquisition channels rather than individual prospects. Specific subreddits, Discord servers, Slack communities, Indie Hackers, niche newsletters.
 
-4. **Email drafting** using `references/email-templates.md`. Custom per recipient — not a blast. Enforce:
+4. **Email drafting** using `${CLAUDE_PLUGIN_ROOT}/references/email-templates.md`. Custom per recipient — not a blast. Enforce:
    - 50–100 words max.
    - Plain text. No HTML, no images, no signature graphics.
    - One sentence of founder credibility.
@@ -49,7 +49,7 @@ Read `STARTUP-STATE.md`; pull ICP, pricing, MVP/Experiment plan. Update Active E
    - Single clear CTA (15–20 minute call, with two specific time options — NOT "let's connect").
    - No marketing language ("leverage AI to deliver value"). Direct verbs ("we help X do Y without Z").
 
-5. **Funnel math — backwards from goal** using `references/sales-funnel-math.md`. Example for B2B SaaS:
+5. **Funnel math — backwards from goal** using `${CLAUDE_PLUGIN_ROOT}/references/sales-funnel-math.md`. Example for B2B SaaS:
    - Goal: 10 paying customers in 8 weeks.
    - Estimated cold close rate: 3–5% (founder-led, well-targeted).
    - Required qualified conversations: 250.
@@ -122,4 +122,4 @@ Per step 13. State explicitly: "Type `/skill <name>` to continue."
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Direct on refusals. Use Gustav's framings ("do things that don't scale"). When the founder hedges on the funnel math ("I'll figure that out as I go"), refuse to proceed without it.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Direct on refusals. Use Gustav's framings ("do things that don't scale"). When the founder hedges on the funnel math ("I'll figure that out as I go"), refuse to proceed without it.

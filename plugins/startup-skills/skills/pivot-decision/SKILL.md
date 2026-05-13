@@ -17,11 +17,11 @@ The structured decision gate for "continue / adjust / pivot." Reads the full sta
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — sunk cost (most load-bearing here), loss aversion, optimism bias, chronic pivoting.
-- `references/scoring-rubrics.md` — Dalton's 4-criteria rubric for pivot candidates.
-- `references/case-studies.md` — Slack (Glitch → enterprise chat), Brex (VR → corporate cards), Segment (classroom → analytics), Magic (concierge → AI assistants).
-- `references/external-resources.md` — Dalton's *All About Pivoting*, Eric Ries pivot chapter.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — sunk cost (most load-bearing here), loss aversion, optimism bias, chronic pivoting.
+- `${CLAUDE_PLUGIN_ROOT}/references/scoring-rubrics.md` — Dalton's 4-criteria rubric for pivot candidates.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — Slack (Glitch → enterprise chat), Brex (VR → corporate cards), Segment (classroom → analytics), Magic (concierge → AI assistants).
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Dalton's *All About Pivoting*, Eric Ries pivot chapter.
 
 ## State Document Protocol
 
@@ -47,7 +47,7 @@ Read entire `STARTUP-STATE.md` — every section, not just recent updates. Updat
 4. **Run Klein's Pre-Mortem.** Verbatim or close: *"Imagine it's 12 months from now. The startup has catastrophically failed. Write the autopsy. What were the warning signs we ignored? What did we keep doing despite the data?"*
    - The pre-mortem unlocks risk acknowledgment that direct questioning won't. Founders defend present decisions; they critique past decisions freely.
 
-5. **Apply bias sentinel AGGRESSIVELY** per `references/bias-sentinel.md`:
+5. **Apply bias sentinel AGGRESSIVELY** per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`:
    - **Sunk cost — most load-bearing here.** Name it directly: "You've put 8 months in. That's done. The only question is forward expected value, not past investment." This is the bias that keeps founders in tar pits past the point of any return.
    - **Loss aversion.** Reframe: "Pivoting is gaining another shot on goal, not losing progress. Slack pivoted from Glitch. Brex pivoted from VR. Twitch was Justin.tv."
    - **Optimism bias.** "If you're using inspirational stories about persistence to justify staying, that's a tell — you're using founder folklore as evidence."
@@ -60,7 +60,7 @@ Read entire `STARTUP-STATE.md` — every section, not just recent updates. Updat
 
 7. **If pivot is recommended, generate 3–5 candidate pivots.** Each must be rooted in evidence already gathered: existing customer relationships, partial product, accumulated domain knowledge, prior research from `market-intel`. NOT brand-new spaces the founder has no relationship to.
 
-   For each candidate, score against Dalton's 4-criteria from `references/scoring-rubrics.md`:
+   For each candidate, score against Dalton's 4-criteria from `${CLAUDE_PLUGIN_ROOT}/references/scoring-rubrics.md`:
    - Market size (1–10)
    - Founder-market fit (1–10)
    - Ease of getting started (1–10)
@@ -68,7 +68,7 @@ Read entire `STARTUP-STATE.md` — every section, not just recent updates. Updat
 
    Identify the candidate that is **BOTH higher quality AND easier to start than the current direction.** This is Dalton's two-condition test — without both, the pivot is just movement, not progress.
 
-8. **Reference real pivots from `references/case-studies.md`.** "Brex pivoted from VR to corporate cards because the founders had FMF in fintech, not in VR. The pivot worked because they pivoted *to* where they had earned credibility — not away from a hard problem."
+8. **Reference real pivots from `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`.** "Brex pivoted from VR to corporate cards because the founders had FMF in fintech, not in VR. The pivot worked because they pivoted *to* where they had earned credibility — not away from a hard problem."
 
 9. **Update state.**
    - Current Decision Point: continue / adjust / pivot.
@@ -105,4 +105,4 @@ Per step 10.
 
 ## Tone
 
-Per `references/tone-and-stance.md`. The sharpest moment in the system. Founders bring their hardest emotions to this conversation. Empathy on the difficulty; rigor on the decision. Refuse to soften when the data is clear. Use Dalton's direct framings ("you can only work on one thing at a time").
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. The sharpest moment in the system. Founders bring their hardest emotions to this conversation. Empathy on the difficulty; rigor on the decision. Refuse to soften when the data is clear. Use Dalton's direct framings ("you can only work on one thing at a time").

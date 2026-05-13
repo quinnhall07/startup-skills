@@ -16,11 +16,11 @@ The hardest skill to do well. Drills "companies want to reduce carbon emissions"
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/bias-sentinel.md` — false consensus, narrow-well failure, small sample fallacy.
-- `references/research-playbook.md` — for the ICP-validation searches.
-- `references/case-studies.md` — for narrow-start anchors (Stripe→YC startups, Facebook→Harvard, Airbnb→conferences).
-- `references/external-resources.md` — for Mom Test, Jared Friedman video, Steve Blank.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — false consensus, narrow-well failure, small sample fallacy.
+- `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md` — for the ICP-validation searches.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for narrow-start anchors (Stripe→YC startups, Facebook→Harvard, Airbnb→conferences).
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for Mom Test, Jared Friedman video, Steve Blank.
 
 ## State Document Protocol
 
@@ -54,14 +54,14 @@ Read `STARTUP-STATE.md`; pull idea and any prior ICP attempts. Update Current Hy
 
 8. **Identify the single riskiest assumption.** What one thing would have to be true for this to work? Common shapes: "they'll pay for it" / "they can find us" / "we can deliver it for less than they pay" / "the trigger event happens often enough." Name it as the first thing to test next.
 
-9. **Pre-commit success and kill criteria.** The founder must specify, in advance, what evidence would convince them to continue ("5+ paying pilot customers in 8 weeks") and what would make them stop ("zero paid commitments by week 4 from 30 ICP-targeted conversations"). No moving goalposts. Per the falsification pre-commitment override in `references/bias-sentinel.md`.
+9. **Pre-commit success and kill criteria.** The founder must specify, in advance, what evidence would convince them to continue ("5+ paying pilot customers in 8 weeks") and what would make them stop ("zero paid commitments by week 4 from 30 ICP-targeted conversations"). No moving goalposts. Per the falsification pre-commitment override in `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`.
 
 10. **Bias sentinel pass.** Especially:
     - **False consensus:** "everyone has this problem" — drill back to step 2.
     - **Narrow-well failure:** if the ICP is "small businesses" (30M companies in the US), that's not narrow — it's the opposite. Reject and re-narrow.
     - **Small sample fallacy:** if the founder is anchoring on 2–3 interview responses to define the ICP, name it.
 
-11. **Surface PG's narrow-well metaphor.** A small number of people who desperately need this beats a large number who are mildly interested. Facebook started at Harvard. Stripe started at YC startups. Airbnb started at design conferences. Narrow is correct — anchors from `references/case-studies.md`.
+11. **Surface PG's narrow-well metaphor.** A small number of people who desperately need this beats a large number who are mildly interested. Facebook started at Harvard. Stripe started at YC startups. Airbnb started at design conferences. Narrow is correct — anchors from `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`.
 
 12. **Update state.** Current Hypothesis (filled with the new formulation). Target Customer (all fields). What We Know vs Assumed (each fact, with source). Pre-committed success and kill criteria.
 
@@ -94,4 +94,4 @@ Read `STARTUP-STATE.md`; pull idea and any prior ICP attempts. Update Current Hy
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Drill until specific. Refuse to accept vague answers as final. When the ICP can't be found online, name the implication directly — distribution is the problem, not the product.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Drill until specific. Refuse to accept vague answers as final. When the ICP can't be found online, name the implication directly — distribution is the problem, not the product.

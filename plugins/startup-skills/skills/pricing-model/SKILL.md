@@ -16,12 +16,12 @@ Forces a commit to charging from day one. Selects revenue model by archetype. Re
 
 ## Required Reading
 
-- `references/state-document-protocol.md`
-- `references/pricing-frameworks.md` — the rules and revenue models by archetype.
-- `references/bias-sentinel.md` — freemium-as-cowardice, undercharging.
-- `references/case-studies.md` — Stripe premium pricing, Scribd 4-year free experiment.
-- `references/sales-funnel-math.md` — the implied conversion math at each price point.
-- `references/external-resources.md` — Gustav, Lenny Rachitsky on pricing.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
+- `${CLAUDE_PLUGIN_ROOT}/references/pricing-frameworks.md` — the rules and revenue models by archetype.
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — freemium-as-cowardice, undercharging.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — Stripe premium pricing, Scribd 4-year free experiment.
+- `${CLAUDE_PLUGIN_ROOT}/references/sales-funnel-math.md` — the implied conversion math at each price point.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Gustav, Lenny Rachitsky on pricing.
 
 ## State Document Protocol
 
@@ -33,7 +33,7 @@ Read `STARTUP-STATE.md`; pull ICP, archetype, hypothesis. Update Pricing section
 
 2. **Invoke `market-intel`** for competitor pricing if not already done. Pull 5–10 competitor price points across the closest comparable products.
 
-3. **Surface the revenue models on the table** for this archetype, per `references/pricing-frameworks.md`:
+3. **Surface the revenue models on the table** for this archetype, per `${CLAUDE_PLUGIN_ROOT}/references/pricing-frameworks.md`:
    - **B2B SaaS:** subscription (most common); usage-based for devtools/infra; enterprise contracts for high-ACV.
    - **B2C subscription:** monthly subscription as default.
    - **Marketplace:** take-rate (15–20% start); listing fees if supply is constrained.
@@ -41,7 +41,7 @@ Read `STARTUP-STATE.md`; pull ICP, archetype, hypothesis. Update Pricing section
    - **Services-to-product:** charge as consulting first; productize once you've solved 5+ customers manually.
    - **Freemium:** only when free users generate genuine network/data value.
 
-4. **Apply YC's pricing rules** from `references/pricing-frameworks.md` — these are non-negotiable in this skill:
+4. **Apply YC's pricing rules** from `${CLAUDE_PLUGIN_ROOT}/references/pricing-frameworks.md` — these are non-negotiable in this skill:
    - **Charge from day one.** Cite Scribd's 4-year free experiment (lost 90% of users when they started charging, but went from $0 to a real business). Pre-revenue users are not validation.
    - **Price high enough to signal value.** Cite Stripe's premium pricing at launch.
    - **Free trials are almost always wrong.** Money-back guarantees usually better. The skill REFUSES to recommend a free trial without a specific reason that money-back can't satisfy.
@@ -50,7 +50,7 @@ Read `STARTUP-STATE.md`; pull ICP, archetype, hypothesis. Update Pricing section
 
 5. **For each candidate price point, compute the implied math:**
    - Path to $1M ARR: $1M / (price × 12) = customers needed.
-   - Cross-reference with `references/sales-funnel-math.md`: at typical 3–5% cold close rate, how many ICP conversations does that take?
+   - Cross-reference with `${CLAUDE_PLUGIN_ROOT}/references/sales-funnel-math.md`: at typical 3–5% cold close rate, how many ICP conversations does that take?
    - Surface this math explicitly. The founder will see whether the price + funnel combo is feasible.
 
 6. **Commit a price.** Single number, written into `STARTUP-STATE.md`. Do not allow "we'll figure it out later" — pricing changes the MVP shape and the outreach approach. If the founder won't commit, refuse to proceed; route back to `idea-pressure-test` or `problem-focus` because the value prop isn't sharp enough to price.
@@ -98,4 +98,4 @@ Per step 11. Almost always `mvp-architect` or `outreach-engine` next.
 
 ## Tone
 
-Per `references/tone-and-stance.md`. Direct on refusals (freemium, free trial, deferring the decision). Cite Scribd and Stripe by name when the founder hedges. The committed number is the artifact; everything else is conversation.
+Per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`. Direct on refusals (freemium, free trial, deferring the decision). Cite Scribd and Stripe by name when the founder hedges. The committed number is the artifact; everything else is conversation.

@@ -17,11 +17,11 @@ Captures who the founder is, what they know, what they have, and what they're wi
 
 ## Required Reading
 
-- `references/state-document-protocol.md` — read/write rules.
-- `references/bias-sentinel.md` — scan for founder-market fit gaps, inside view, optimism bias.
-- `references/research-playbook.md` — for the parallel domain research.
-- `references/case-studies.md` — for pattern-matching the founder to known structures.
-- `references/external-resources.md` — for the right reading to surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md` — read/write rules.
+- `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md` — scan for founder-market fit gaps, inside view, optimism bias.
+- `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md` — for the parallel domain research.
+- `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for pattern-matching the founder to known structures.
+- `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for the right reading to surface.
 
 ## State Document Protocol
 
@@ -40,13 +40,13 @@ Read `STARTUP-STATE.md` at activation. Confirm the Founder Profile section is em
    6. **Starting point.** "Where are you right now? No idea / problem observed / product built / customers but stalled."
    7. **Risk tolerance.** "Worst case: this doesn't work in six months. Can you live with that? What's the floor?"
 
-3. **Parallel domain research.** As soon as Q1 is answered, launch web research on the stated domain using `references/research-playbook.md`. 4–6 searches across forum pain, review complaints, job postings, and failed-startup retrospectives in the founder's domain. Surface a 4-bullet domain context note alongside the interview. Do not stall the questions waiting for research; let it run.
+3. **Parallel domain research.** As soon as Q1 is answered, launch web research on the stated domain using `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md`. 4–6 searches across forum pain, review complaints, job postings, and failed-startup retrospectives in the founder's domain. Surface a 4-bullet domain context note alongside the interview. Do not stall the questions waiting for research; let it run.
 
-4. **Pattern-match to case studies.** After the seven questions, compare the profile to `references/case-studies.md`. If there's a strong structural analogue, say so explicitly: "Your background is structurally similar to Tracy Young at PlanGrid — domain expert + technical cofounder, schlep-heavy regulated B2B. Here's what worked for them: …" If no clean match, do a quick web search for fresh analogues rather than force-fitting.
+4. **Pattern-match to case studies.** After the seven questions, compare the profile to `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`. If there's a strong structural analogue, say so explicitly: "Your background is structurally similar to Tracy Young at PlanGrid — domain expert + technical cofounder, schlep-heavy regulated B2B. Here's what worked for them: …" If no clean match, do a quick web search for fresh analogues rather than force-fitting.
 
 5. **Surface questions only the founder could answer.** From the research, identify 2–3 ambiguities — things the public web cannot resolve. Ask only the founder. Examples: "Reviews say the existing tools fail on X; is X actually what your people complain about, or is it Y?" "Job postings suggest companies hire Z roles to handle this; do those roles in *your* network buy software, or do they build it in-house?"
 
-6. **Bias sentinel pass.** Apply `references/bias-sentinel.md`. Especially watch for:
+6. **Bias sentinel pass.** Apply `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`. Especially watch for:
    - **Founder-market fit gap:** founder lacks domain experience AND can't build. Name it directly. Ask how they plan to compensate (cofounder search, embed in industry, etc.).
    - **Inside view on timeline:** Q3's answer is almost always optimistic. Note it without lecturing.
    - **Risk tolerance shallow:** "can live with it" plus full-time-on-savings warrants a specific runway question — how many months exactly?
@@ -83,4 +83,4 @@ Per Starting Point answer in step 8 above. Always tell the founder how to invoke
 
 ## Tone
 
-Senior partner doing intake at office hours. Specific. No softening "great answer!" between questions. When a real gap surfaces (FMF, runway floor), name it directly per `references/tone-and-stance.md`.
+Senior partner doing intake at office hours. Specific. No softening "great answer!" between questions. When a real gap surfaces (FMF, runway floor), name it directly per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`.

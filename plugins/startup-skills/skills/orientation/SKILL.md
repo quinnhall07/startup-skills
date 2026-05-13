@@ -20,9 +20,9 @@ Do NOT activate if a state document already exists and the founder is in mid-flo
 
 Load these references before the first response:
 
-- `references/tone-and-stance.md` — establishes the voice.
-- `references/state-document-template.md` — the schema to instantiate.
-- `references/state-document-protocol.md` — read/write rules.
+- `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md` — establishes the voice.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-template.md` — the schema to instantiate.
+- `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md` — read/write rules.
 
 ## State Document Protocol
 
@@ -42,7 +42,7 @@ This skill is the *only* skill that creates `STARTUP-STATE.md` from scratch. Def
    > 5. Have customers but feeling stuck — considering a pivot.
 
    One question, one answer. Don't combine with founder-context yet; that comes next.
-4. **Initialize `STARTUP-STATE.md`** by copying the template from `references/state-document-template.md`. Populate whatever the user has already said in this conversation — name (if given), domain hints, idea sketch, time pressure. Fields the user hasn't addressed stay as placeholders. Set `_Last updated_` to today's ISO date with `by orientation`.
+4. **Initialize `STARTUP-STATE.md`** by copying the template from `${CLAUDE_PLUGIN_ROOT}/references/state-document-template.md`. Populate whatever the user has already said in this conversation — name (if given), domain hints, idea sketch, time pressure. Fields the user hasn't addressed stay as placeholders. Set `_Last updated_` to today's ISO date with `by orientation`.
 5. **Route based on the option chosen.** Recommend the next skill explicitly:
    - Option 1 → `founder-context`, then `idea-genesis`.
    - Option 2 → `founder-context`, then `idea-pressure-test`.
@@ -73,4 +73,4 @@ This skill is the *only* skill that creates `STARTUP-STATE.md` from scratch. Def
 
 ## Tone
 
-Direct. Three sentences for system intro, no marketing words ("transform," "accelerate," "unleash"). Lead with what the system does and how it differs. Voice per `references/tone-and-stance.md`.
+Direct. Three sentences for system intro, no marketing words ("transform," "accelerate," "unleash"). Lead with what the system does and how it differs. Voice per `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md`.
