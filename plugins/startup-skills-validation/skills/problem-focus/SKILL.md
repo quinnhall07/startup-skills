@@ -1,6 +1,6 @@
 ---
 name: problem-focus
-description: Use after an idea passes pressure-test, OR when the user has a vague problem area but no sharp hypothesis. Fires on phrases like "companies need better X," "people struggle with Y," "the problem is...," "who is this for," "define my ICP," or whenever the user describes a problem at an abstract level. Sharpens vague problem spaces into specific, tractable, testable hypotheses using the "who specifically? in what situation exactly?" recursion. Builds the ICP, including the buyer/user distinction for B2B. Validates the customer type exists in claimed numbers via parallel web research. Formulates the hypothesis in standard format and identifies the single riskiest assumption.
+description: (startup-skills) Use after an idea passes pressure-test, OR when the user has a vague problem area but no sharp hypothesis. Fires on phrases like "companies need better X," "people struggle with Y," "the problem is...," "who is this for," "define my ICP," or whenever the user describes a problem at an abstract level. Sharpens vague problem spaces into specific, tractable, testable hypotheses using the "who specifically? in what situation exactly?" recursion. Builds the ICP, including the buyer/user distinction for B2B. Validates the customer type exists in claimed numbers via parallel web research. Formulates the hypothesis in standard format and identifies the single riskiest assumption.
 ---
 
 # Problem Focus

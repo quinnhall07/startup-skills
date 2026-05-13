@@ -1,6 +1,6 @@
 ---
 name: rapid-experiments
-description: Use when the founder needs to test an assumption fast, before committing to building real product. Fires on phrases like "how do I test this," "validate before building," "fastest way to find out," "Fake Door," "Wizard of Oz," "concierge MVP," "smoke test," or whenever the founder is about to start engineering. Designs a Fake Door, Wizard of Oz, or Concierge MVP based on the hypothesis and market geometry. The system REFUSES to authorize engineering for B2B enterprise without a Concierge MVP first (Fake Door tests damage enterprise trust). For consumer/devtools, aggressively deploys Fake Door / Wizard of Oz. Sets falsification pre-commitments before deployment.
+description: (startup-skills) Use when the founder needs to test an assumption fast, before committing to building real product. Fires on phrases like "how do I test this," "validate before building," "fastest way to find out," "Fake Door," "Wizard of Oz," "concierge MVP," "smoke test," or whenever the founder is about to start engineering. Designs a Fake Door, Wizard of Oz, or Concierge MVP based on the hypothesis and market geometry. The system REFUSES to authorize engineering for B2B enterprise without a Concierge MVP first (Fake Door tests damage enterprise trust). For consumer/devtools, aggressively deploys Fake Door / Wizard of Oz. Sets falsification pre-commitments before deployment.
 ---
 
 # Rapid Experiments

@@ -1,6 +1,6 @@
 ---
 name: orientation
-description: Use this skill the FIRST time a user opens a new Claude session about starting, exploring, building, pivoting, or working on a startup or business idea. Also use when the user says any of "help me start a startup," "I have an idea," "I want to start a company," "where do I begin," "I'm working on a startup," "I'm stuck on my startup," or "what should I do next." Initializes the shared startup state document, explains the Startup Skills system (briefly, no marketing fluff), and routes the user to the right next skill based on where they are in the journey. Run only once per project — subsequent sessions read the existing state document directly.
+description: (startup-skills) Use this skill the FIRST time a user opens a new Claude session about starting, exploring, building, pivoting, or working on a startup or business idea. Also use when the user says any of "help me start a startup," "I have an idea," "I want to start a company," "where do I begin," "I'm working on a startup," "I'm stuck on my startup," or "what should I do next." Initializes the shared startup state document, explains the Startup Skills system (briefly, no marketing fluff), and routes the user to the right next skill based on where they are in the journey. Run only once per project — subsequent sessions read the existing state document directly.
 ---
 
 # Orientation
