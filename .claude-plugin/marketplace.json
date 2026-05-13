@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "startup-skills-full",
-      "source": ".",
+      "source": "./plugins/startup-skills-full",
       "description": "Complete all-in-one bundle containing all core, discovery, validation, execution, pmf, and artifact skills.",
       "skills": [
         "./plugins/startup-skills-core/skills/orientation",
