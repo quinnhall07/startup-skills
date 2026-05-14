@@ -4,13 +4,13 @@ A menu of validation methods, with the archetype guidance that determines which 
 
 ## The matrix — by archetype
 
-| Archetype | Recommended | Avoid | Why |
-|---|---|---|---|
-| **B2B enterprise** (Fortune 500, regulated industries) | Concierge MVP framed as "high-touch pilot" or "white-glove onboarding"; Letter of Intent process | Fake Door, anonymous landing pages | Enterprise buyers cannot afford to discover the product doesn't exist after they've committed budget. Trust destroyed once stays destroyed. |
-| **B2B SMB / devtools** | Either Fake Door or Concierge. Cold outreach batches with strong CTAs. | Mass Fake Door without follow-up plan | SMB and developer buyers tolerate roughness; honest "early access" framing works. |
-| **Consumer SaaS / mobile** | Aggressive Fake Door, Wizard of Oz, video MVPs | Concierge as primary (can't scale to needed sample size) | Users are forgiving; novelty signal needs volume not depth. |
-| **Hardware** | Pre-orders on Kickstarter or landing page with refundable deposit | Pure Fake Door (no payment) | Hardware needs financial signal; the cost of being wrong is too high to validate on signups. |
-| **Marketplace** | Solve one side at a time, manually. Be the other side yourself. | Building both sides simultaneously | Liquidity is the only marketplace metric. Concentrate supply or demand first; the other side follows. |
+| Archetype | Recommended | Avoid | Vibe-code OK? | Why |
+|---|---|---|---|---|
+| **B2B enterprise** (Fortune 500, regulated industries) | Concierge MVP framed as "high-touch pilot" or "white-glove onboarding"; Letter of Intent process | Fake Door, anonymous landing pages | NO (regulated, trust matters) | Enterprise buyers cannot afford to discover the product doesn't exist after they've committed budget. Trust destroyed once stays destroyed. |
+| **B2B SMB / devtools** | Either Fake Door or Concierge. Cold outreach batches with strong CTAs. | Mass Fake Door without follow-up plan | Partial (only for landing pages / Fake Door UI) | SMB and developer buyers tolerate roughness; honest "early access" framing works. |
+| **Consumer SaaS / mobile** | Aggressive Fake Door, Wizard of Oz, video MVPs | Concierge as primary (can't scale to needed sample size) | Yes (vibe-code OK for prototype phase) | Users are forgiving; novelty signal needs volume not depth. |
+| **Hardware** | Pre-orders on Kickstarter or landing page with refundable deposit | Pure Fake Door (no payment) | Yes (vibe-code OK for landing/Fake Door; can't vibe-code hardware itself) | Hardware needs financial signal; the cost of being wrong is too high to validate on signups. |
+| **Marketplace** | Solve one side at a time, manually. Be the other side yourself. | Building both sides simultaneously | Partial (vibe-code one side, never both with PII) | Liquidity is the only marketplace metric. Concentrate supply or demand first; the other side follows. |
 
 ## Technique details
 
@@ -20,6 +20,22 @@ A landing page that describes the product as if it exists, with a single CTA —
 
 - **What it tests:** willingness to opt into solving the problem.
 - **Signal weight:** ~0.4 per email (per `evidence-weighting-matrix.md`). Higher (0.6+) if combined with a follow-up payment ask within 48 hours.
+
+**Source-quality modifiers:**
+- Generic / untargeted traffic: 0.2 weight per email.
+- Warm community / niche subreddit / Slack: 0.5 weight per email.
+- Cold paid ads / Facebook/Google traffic: 0.3 weight per email.
+- Direct community referral (someone's slack channel, niche forum): 0.5 weight.
+
+**Deposit-size modifiers (when capturing a refundable deposit alongside email):**
+- $1 refundable: 0.5 weight.
+- $10-49 refundable: 0.6 weight.
+- $50-499 refundable: 0.8 weight.
+- $500+ refundable: 0.9 weight (approaches pre-order weight).
+- Non-refundable deposit: 1.0 weight (treat as paid).
+
+These modifiers stack with the base. Treat the highest source + deposit pair, not the sum.
+
 - **Time to deploy:** 1–3 days for a single page (Webflow, Carrd, Framer, or hand-coded HTML).
 - **When NOT to use:** B2B enterprise (trust damage); regulated industries; any product where the user's discovery that it's not real costs them measurably.
 
@@ -47,6 +63,13 @@ A landing page with payment intent capture — a $1, $50, or $500 deposit that's
 
 - **What it tests:** financial commitment to the problem.
 - **Signal weight:** 0.8 (refundable) to 1.0 (non-refundable).
+
+**Deposit-size adjustments:**
+- $1-10 refundable: 0.5-0.6 (consumer products only — the friction is the signal, not the dollars).
+- $50-499 refundable: 0.8 (the canonical Kickstarter-style number).
+- $500+ refundable: 0.9.
+- Non-refundable: 1.0 (this is now "they paid").
+
 - **Time to deploy:** 1–2 weeks (Stripe + landing page + clear terms).
 - **When NOT to use:** consumer products under $10 — the payment friction overwhelms the signal.
 
@@ -58,6 +81,29 @@ A 50–200 person outreach campaign with a specific, behavioral CTA — pay for 
 - **Signal weight:** depends on the CTA. Email open = 0.1. Reply = 0.3. Scheduled call = 0.4. Paid commitment = 1.0.
 - **Time to deploy:** 1 week (list + drafts + send).
 - **When NOT to use:** broad spray-and-pray; this only works targeted.
+
+### Vibe-coded MVP
+
+A landing page or simple UI built with Lovable/Bolt/v0 that demonstrates the proposed product. The customer interacts with a vibe-coded prototype, NOT a fake door.
+
+- **What it tests**: usability + willingness-to-engage with the actual flow (not just "would you sign up").
+- **Signal weight**: 0.5 base (active engagement with the UI exceeds Fake Door email signal). Increase to 0.7 if the user completes the core flow (e.g., uploads a file, sees a result). Increase to 0.8-1.0 if they pay during/after the demo.
+- **Time to deploy**: hours to 1 day for Lovable / Bolt.
+- **When NOT to use**:
+  - **Regulated / payments / auth surfaces** — vibe-code bans apply (per `${CLAUDE_PLUGIN_ROOT}/references/ai-era-anti-patterns.md`). Use Concierge instead.
+  - When the product hypothesis is the workflow itself — Concierge tests workflow better than UI.
+  - Past 3-5 components — Bolt/Lovable code quality degrades.
+
+### Wizard of Oz (AI-product variant)
+
+A real-looking UI where the founder manually performs the AI-output operation. The user thinks they're getting model output; you're producing it.
+
+- **What it tests**: whether the user values the output enough to pay, before you've solved the model quality / cost problems.
+- **Signal weight**: 0.7-0.9. The AI variant is one of the strongest pre-build signals because it isolates "is the output valuable?" from "can we build the model?"
+- **Time to deploy**: 1 week.
+- **Anchor**: Magic launched as SMS-based concierge — humans behind the SMS interface. Validated demand cheaply; failed because retention economics didn't work (not because of the WoZ).
+
+---
 
 ### Problem validation post
 

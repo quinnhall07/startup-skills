@@ -1,18 +1,47 @@
 ---
 name: mvp-architect
-description: >
-  (startup-skills) Use when behavioral validation is strong enough to justify building. Fires on "time to build," "what should v1 include," "ready to write code," or "I have validation, now what." Ruthlessly cuts features against a single validated hypothesis. Sets a hard 2-6 week deadline. Refuses to authorize building until rapid-experiments has produced behavioral signal.
+description: |
+  Ruthlessly cut features against a single validated hypothesis. Hard 2-6 week deadline. Identifies the hair-on-fire early adopter (Seibel brick test). Refuses to scope a build without behavioral signal — or forces explicit risk acknowledgment with logged date.
+
+  TRIGGER when: user says "time to build", "what should v1 include", "ready to write code", "I have validation, now what", "what's the minimum I need to ship"; auto-fire from `rapid-experiments` when results meet success criteria; auto-fire from `signal-audit` when stage advances to early-signal+ AND user asks about building.
+
+  SKIP: user has no behavioral signal (route to `rapid-experiments` first, OR force explicit risk acknowledgment per HARD-GATE); user wants to choose the AI build stack (route to `ai-mvp-stack-selection`); user is post-MVP looking at v2 (route to `continuous-discovery`); user is post-launch needing first customers (route to `outreach-engine`).
 ---
 
 # MVP Architect
 
 Ruthless feature-cutting against a single validated hypothesis. Hard 2–6 week deadline; anything longer is not an MVP, it's a v1. Identifies the hair-on-fire early adopter who tolerates a crappy product. Refuses to scope a build until behavioral validation exists — or makes the founder explicitly accept the risk.
 
+## HARD-GATE — do not scope an MVP unless:
+
+- [ ] `rapid-experiments` has produced behavioral signal AT LEAST 0.6+ weight, OR
+- [ ] Founder explicitly acknowledges pre-validation risk (logged below), AND
+- [ ] Pricing is committed in `STARTUP-STATE.md` Pricing section, AND
+- [ ] ICP is sharp (Target Customer section populated, not vague), AND
+- [ ] AI build stack is chosen if AI-product (via `ai-mvp-stack-selection`)
+
+**If pre-validation risk-accept path chosen**, log to `STARTUP-STATE.md` MVP/Experiment Plan with this exact format:
+
+> **Pre-validation Risk Accepted [YYYY-MM-DD]**: Founder chooses to build without behavioral test. Acknowledged: timeline will slip; signal quality will be lower; iteration cost will be higher. Proceeding.
+
 ## When to Activate
 
 - Phrases: "time to build," "let's start the MVP," "what should v1 include," "ready to write code," "I have validation, now what," "what's the minimum I need to ship."
 - Auto-fire from `rapid-experiments` when results meet success criteria.
 - Auto-fire from `signal-audit` when stage advances to early-signal or higher AND the founder asks about building.
+
+## Red flags
+
+| Founder claim | Response |
+|---|---|
+| "v1 needs accounts, billing, admin, analytics, mobile..." | Feature creep. Cut everything except the hypothesis test. |
+| Targeting mainstream customer, not hair-on-fire | MVP premature. Force the brick test. |
+| "I'll just ship it and see" without kill criterion | Refuse. Pre-commit kill criterion before scope is done. |
+| Timeline >6 weeks | Cut more features OR scope back the hypothesis test. |
+| Vibe-coding auth / payments / PII | Cite `ai-era-anti-patterns.md` Trap 6. Craft-code only for these surfaces. |
+| Building before pricing is committed | Refuse. Pricing changes MVP shape. Route to `pricing-model` first. |
+| Building before AI-stack chosen (AI-product) | Route to `ai-mvp-stack-selection`. |
+| Three-month "MVP" plan | That's a v1. Re-scope to <6 weeks. |
 
 ## Required Reading
 
@@ -22,6 +51,9 @@ Ruthless feature-cutting against a single validated hypothesis. Hard 2–6 week 
 - `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — supporting context.
 - `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md` — for v1 stack recommendations.
 - `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — Michael Seibel *How to Build an MVP*, Eric Ries.
+- `${CLAUDE_PLUGIN_ROOT}/references/ai-era-anti-patterns.md` — vibe-vs-craft, token-cost economics.
+- `${CLAUDE_PLUGIN_ROOT}/references/retention-metrics.md` — define success criterion in cohort-retention terms.
+- `${CLAUDE_PLUGIN_ROOT}/references/aggressive-consultation-archetype.md`
 
 ## State Document Protocol
 
@@ -32,9 +64,8 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 1. **Read state.** PMF score, Active Experiments results, current hypothesis.
 
 2. **Gate check — has `rapid-experiments` produced behavioral signal?**
-   - **If YES:** continue.
-   - **If NO:** state directly: "You haven't run a behavioral test yet. Building real product now is a bet that you can guess the hypothesis right on the first try — and the data says you can't. Strongly recommend running a Fake Door, Concierge, or pre-order test first via `rapid-experiments`. If you want to proceed anyway, say 'I accept the risk' and we'll continue — but the system is logging that you're building on attitudinal evidence."
-   - If the founder accepts the risk, log it explicitly in the state document under MVP / Experiment Plan → "Pre-validation risk acknowledged: [date]." Continue.
+   - **If YES (≥0.6 weight on at least one experiment):** continue.
+   - **If NO:** state directly: "You haven't run a behavioral test yet. Building real product now is a bet you can guess the hypothesis right on the first try — data says you can't. Strongly recommend running a Fake Door, Concierge, or pre-order test first via `rapid-experiments`. If you want to proceed anyway, say 'I accept the pre-validation risk' and we'll log it explicitly — but I'm flagging that you're building on attitudinal evidence." Log per HARD-GATE format above.
 
 3. **State the hypothesis the MVP tests, in one sentence.** Pull from `STARTUP-STATE.md`. If it's vague, refuse — return to `problem-focus`.
 
@@ -42,7 +73,13 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 5. **Cut with extreme prejudice** using YAGNI-against-hypothesis. For each feature, ask one question: *"Does the hypothesis test require this feature, or is this for some hypothetical v2 user?"* Cut every feature where the answer is "v2." Michael Seibel's framing: "Be desperate to leave features out."
 
-6. **Reference canonical narrow MVPs** from `${CLAUDE_PLUGIN_ROOT}/references/mvp-examples.md` — at minimum cite Airbnb v1 (no payments, no maps, only conferences, air mattresses), Twitch v1 (one streamer, one page, no game-specific features), Stripe v1 (manual nightly faxes, only YC startups). The pattern: ridiculously narrow, ridiculously crappy. Ship it.
+6. **Reference canonical narrow MVPs** from `${CLAUDE_PLUGIN_ROOT}/references/mvp-examples.md`. The pattern: ridiculously narrow, ridiculously crappy. Ship it.
+   - **Airbnb v1**: no payments, no maps, only conferences, air mattresses. 2 weeks to first user.
+   - **Twitch v1**: one streamer (Justin Kan with head-cam), one page, no gaming-specific features.
+   - **Stripe v1**: manual nightly bank faxes by Patrick + John. Only YC startups. Charged from day 1.
+   - **DoorDash v1**: static webpage + founders driving food themselves. Zero software.
+   - **Dropbox v1**: 3-minute video demo. Product didn't exist. 5k → 75k beta signups overnight.
+   - **Buffer v1**: two-step landing page test for willingness-to-pay BEFORE writing product code.
 
 7. **Identify the hair-on-fire early adopter** — Michael Seibel's brick metaphor: the customer whose pain is acute enough they'll use a brick if the brick solves the problem. Specific named role, specific named situation. NOT the mainstream customer. If the founder can't name a hair-on-fire ICP, the MVP is premature; return to `problem-focus`.
 
@@ -54,7 +91,12 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 10. **Set a hard timeline — 2 to 6 weeks.** Anything longer is not an MVP; it's a v1. If the cut feature list cannot ship in 6 weeks with current resources, cut more features. If still can't, the hypothesis test is too ambitious; scope back.
 
-11. **Reference Class Forecasting** per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`. The founder will underestimate timeline. Force them to look at 3–5 comparable MVPs and use the historical median, not their optimistic gut estimate. If uncertain, multiply by ~3.
+11. **Reference Class Forecasting** per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`. Force outside-view timeline:
+    - Name 3-5 comparable MVPs in the founder's archetype.
+    - Pull their actual end-to-end timeline (from spec → first paying customer).
+    - Use the **median** (not the optimistic case).
+    - If still uncertain, multiply the founder's estimate by 3 (Lovallo/Kahneman planning fallacy correction).
+    - Example: "Your estimate is 4 weeks. Three comparable B2B SaaS MVPs (Linear, Notion, Tally) took median 12 weeks to first paying customer. Using the outside view: plan for 12 weeks, hope for 8."
 
 12. **Bias sentinel pass.** Especially:
     - **Planning fallacy.** Force outside-view timeline.
@@ -72,11 +114,11 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
     - **Technical stack recommendation** (tool-agnostic with options from `${CLAUDE_PLUGIN_ROOT}/references/tool-recommendations.md` — typically Next.js + Vercel + Supabase or Postgres + Stripe for SaaS; native + Firebase for mobile)
     - **Launch plan** (who the first 5 customers are by name, how they'll be onboarded — Stripe Collison-style)
 
-14. **Explicit handoff.** When in Claude Code with the `superpowers` plugin installed, invoke `brainstorming` with the MVP spec to plan the actual build. When in claude.ai, produce a clean spec the user can hand to a developer or paste into Claude Code.
+14. **Explicit handoff.** When in Claude Code, invoke `brainstorming` (from superpowers plugin) or `writing-plans` with the MVP spec to plan the actual build. When in claude.ai, produce a clean spec the user can hand to a developer or paste into Claude Code. For AI-product builds, ensure `ai-mvp-stack-selection` has been run first.
 
 15. **Update state.** MVP / Experiment Plan (full spec). Active Experiments (the MVP is itself an experiment with success/kill criteria).
 
-16. **Recommend `outreach-engine`** to line up first users in parallel with building. The hair-on-fire ICP customers should be approached during week 1 of the build, not after launch.
+16. **Recommend `outreach-engine`** to line up first users in parallel with building. Also: `ai-mvp-stack-selection` if AI-product and stack not yet chosen; `pricing-model` if pricing not committed.
 
 ## Outputs
 
@@ -100,7 +142,7 @@ Read `STARTUP-STATE.md`. Pull PMF Running Score, Active Experiments, hypothesis,
 
 ## Recommended Next Skills
 
-`outreach-engine` in parallel with the build (recruit hair-on-fire customers). `signal-audit` at week 4 of the MVP build to check progress against success criterion. `pricing-model` if pricing wasn't committed before scoping (it should have been — pricing changes MVP shape).
+`outreach-engine` in parallel with the build (recruit hair-on-fire customers). `signal-audit` at week 4 of the MVP build to check progress against success criterion. `ai-mvp-stack-selection` if AI-product and stack not yet chosen. `pricing-model` if pricing wasn't committed before scoping (it should have been — pricing changes MVP shape).
 
 ## Tone
 

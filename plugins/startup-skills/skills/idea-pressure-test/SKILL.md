@@ -1,7 +1,11 @@
 ---
 name: idea-pressure-test
-description: >
-  (startup-skills) Use when the founder has a specific idea to evaluate. Fires on "is this a good idea," "should I work on this," "evaluate my idea," or whenever a concrete concept is pitched. Steel-mans first, then scores against Dalton's 4-criteria rubric and the YC 10-question framework. Detects tar pits, schlep blindness, and SISP framings. Willing to say "kill it."
+description: |
+  Steel-man a specific idea first, then score against Dalton's 4-criteria rubric AND YC's 10-question framework — backed by live `market-intel` research. Detects tar pits, schlep blindness, SISP framings. Willing to recommend "kill it."
+
+  TRIGGER when: founder pitches a concrete, named idea ("I want to build X for Y"); user says "is this a good idea", "what do you think of [idea]", "should I work on this", "evaluate my idea", "score my idea"; after `idea-genesis` for any chosen candidate.
+
+  SKIP: idea is vague / SISP-shaped (route to `idea-genesis`); idea is sharp and validated, founder wants to operationalize (route to `problem-focus` or `mvp-architect`); idea is post-PMF (out of scope).
 ---
 
 # Idea Pressure Test
@@ -14,6 +18,17 @@ Steel-mans the idea first, then scores it across Dalton's 4-criteria rubric and 
 - Direct request: "is this a good idea," "what do you think of [idea]," "should I work on this," "evaluate my idea," "score my idea."
 - After `idea-genesis` for any chosen candidate.
 
+## Red flags
+
+| Founder claim | Response |
+|---|---|
+| "I can't believe no one has solved this" | Tar pit signal. Force one minute of Google search before continuing. |
+| "We're different from those failed startups" | Inside view. Force outside view: name the specific failures + structural reasons. |
+| Dismisses idea as boring | Schlep blindness. Boring + regulated + tedious is often the moat. |
+| Uses TAM math as validation | Refuse. 50 desperate users beats $400B theoretical TAM. |
+| "We have no real competition" | Almost always means no market. Force prior-attempt research. |
+| Treats AI as the wedge | SISP. Route to `idea-genesis`. The wedge must be domain pain, not technology. |
+
 ## Required Reading
 
 - `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
@@ -22,6 +37,9 @@ Steel-mans the idea first, then scores it across Dalton's 4-criteria rubric and 
 - `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md` — for the canonical tar pit list and the schlep-vs-tar-pit diagnostic.
 - `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for real-world anchor companies.
 - `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for the right essays and videos to surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/ai-era-anti-patterns.md` — 8 AI-era founder traps + wrapper test.
+- `${CLAUDE_PLUGIN_ROOT}/references/jtbd-protocols.md` — Ulwick ODI for B2B fit.
+- `${CLAUDE_PLUGIN_ROOT}/references/aggressive-consultation-archetype.md`
 
 ## State Document Protocol
 
@@ -33,7 +51,7 @@ Read `STARTUP-STATE.md` to pull the idea, founder profile, and any prior pressur
 
 2. **Steel-man first.** Articulate the best version of the idea in 3–5 sentences before any critique. Use the explicit framing: *"Here's the strongest version of what you're proposing: …"* This is not courtesy — if the steel-manned version still fails the rubric, the critique is stronger. The founder should hear their best case said back to them better than they could say it themselves.
 
-3. **Invoke `market-intel`** on the idea if it hasn't been run, or if more than ~30 days have passed since the last run. Pull pain, vocabulary, who's building, what's missing, why-now, failed attempts, tar-pit check.
+3. **Invoke `market-intel`** on the idea. Check `STARTUP-STATE.md` Research Cache: if `market-intel` was last run on this topic <30 days ago, cite the prior research. Otherwise, run fresh. Pull: pain expressed, customer vocabulary, who's building, what's missing, why-now, failed attempts, tar-pit check.
 
 4. **Score Dalton's 4-criteria rubric** from `${CLAUDE_PLUGIN_ROOT}/references/scoring-rubrics.md` — Market size, FMF, Ease of getting started, Early market feedback. One sentence of reasoning per score. FMF veto-weighted: if FMF < 5, the composite recommendation is constrained regardless of other scores.
 
@@ -45,22 +63,26 @@ Read `STARTUP-STATE.md` to pull the idea, founder profile, and any prior pressur
    - **SISP:** if the idea is technology-first ("I want to use AI to do something"), refuse to evaluate as a startup idea. Redirect to `idea-genesis` with a clear note that we don't evaluate Solutions In Search of a Problem.
    - **"No competition is good":** if the founder claims no one else is building this, push back hard. Per Dalton: existing competitors is usually a good sign; no competition usually means no market. Force them to find prior attempts before continuing.
 
-7. **Composite recommendation** per `${CLAUDE_PLUGIN_ROOT}/references/scoring-rubrics.md`:
+7. **Composite recommendation** per `${CLAUDE_PLUGIN_ROOT}/references/scoring-rubrics.md`. Weighting:
+   - FMF is veto-weighted (< 5 = composite constrained regardless).
+   - Otherwise: FMF 30% + Market Size 25% + Ease of Start 20% + Early Market Feedback 25%.
+   
+   Branches:
    - **FMF ≥ 7 AND ≥ 2 other dimensions ≥ 7** → "Worth pursuing. The single most important gap to close before commitment is [X]. Here's a specific test to close it: [Y]."
-   - **Tar pit** → "This is a tar pit. Specifically: [structural reason]. Move on. We can take what you've learned here back to `idea-genesis`."
-   - **FMF < 5** → "You don't have founder-market fit. Either find a cofounder who does, or change ideas. The system won't help you continue here without an FMF plan."
-   - **Otherwise (mixed)** → "Mixed signal. Here are the 2–3 things we'd need to learn before this becomes clear. [List]. Run `market-intel` again, or run a Fake Door to get behavioral data."
+   - **Tar pit** → "This is a tar pit. Specifically: [structural reason]. Move on. Take what you learned back to `idea-genesis`."
+   - **FMF < 5** → "You don't have founder-market fit. Either find a cofounder who does, or change ideas. I won't help you continue here without an FMF plan."
+   - **Otherwise (mixed)** → "Mixed signal. Here are the 2-3 things we'd need to learn before this becomes clear. Run `market-intel` again on the gap, or run a Fake Door via `rapid-experiments` for behavioral data."
 
-8. **Pattern-match anchors.** From `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`, surface the closest structural analogue and the lesson. "This is structurally similar to [Brex / PlanGrid / Stripe / Magic / etc.]. Here's what worked and what didn't for them: …"
+8. **Mandatory pattern-match.** From `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`, cite the closest structural analogue + the load-bearing lesson. If no clean match in the 10 cases, web-search for fresh analogues from YC alumni, IH writeups, or post-mortems. Never skip this step. "This is structurally similar to [Brex / PlanGrid / Stripe / Magic / etc.]. Here's what worked and what didn't for them: …"
 
 9. **Bias sentinel throughout** per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`. Especially confirmation bias and optimism bias on the founder's own scoring — if they push back hard on a low FMF score, ask what specific evidence they have, not how strongly they feel.
 
 10. **Update state.** Update Current Hypothesis with the steel-manned version. Update Competitive Landscape. Add an entry under What We Know vs What We've Assumed for each scored dimension.
 
 11. **Recommend next skill** based on recommendation:
-    - Worth pursuing → `problem-focus` to sharpen the hypothesis (ships in v0.2; until then, manually refine in the state doc).
+    - Worth pursuing → `problem-focus` to sharpen ICP and hypothesis.
     - Tar pit / no FMF → `idea-genesis` to surface alternatives.
-    - Mixed → `market-intel` for a deeper pass, OR `rapid-experiments` (v0.3) for behavioral test.
+    - Mixed → `market-intel` for deeper pass on the gap, OR `rapid-experiments` for behavioral test.
 
 ## Outputs
 

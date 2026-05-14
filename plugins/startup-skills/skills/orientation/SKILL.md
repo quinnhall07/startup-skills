@@ -1,12 +1,32 @@
 ---
 name: orientation
-description: >
-  (startup-skills) Entry point for the Startup Skills system. Use at the start of any new startup session or when the user says "help me with my startup," "I have an idea," "where do I begin," or "what should I do next." Initializes STARTUP-STATE.md and routes to the right next skill based on where the founder actually is.
+description: |
+  Entry point for Startup Skills. Initializes `STARTUP-STATE.md` and routes the founder to the correct next skill based on where they actually are (vs. where they wish they were). Establishes the Aggressive Epistemic Auditor stance from message one.
+
+  TRIGGER when: first session in a project (no `.claude/startup-state.md` exists); user says "help me with my startup", "I have an idea", "where do I begin", "I want to start a company", "what should I do next", "I'm stuck", "I'm working on a startup"; the user is starting a new project without prior context.
+
+  SKIP: `.claude/startup-state.md` exists AND was updated <7 days ago (read state, continue from the skill named in the most recent Session Log entry); user is mid-flow in another skill; user is asking a tactical question (pricing, deck, outreach) — route directly to that skill.
 ---
 
 # Orientation
 
 The entry point. Establishes the Aggressive Epistemic Auditor stance from message one, initializes `STARTUP-STATE.md` so every later skill has a shared anchor, and routes the founder to the next skill based on where they actually are — not where they wish they were.
+
+## HARD-GATE — do not proceed past this without:
+- [ ] Reading existing `.claude/startup-state.md` (or confirming it doesn't exist)
+- [ ] Either initializing it OR confirming with user they want to reorient
+- [ ] One orientation question with five options answered
+
+If `.claude/startup-state.md` exists and is <7 days old: ask "Continue from `<last_skill_in_session_log>`, or reorient?" Do NOT silently re-run.
+
+## Red flags
+
+| Founder behavior | Response |
+|---|---|
+| Wants to start with a deck or landing page | Refuse. Route through validation first. |
+| Has "an idea about AI/blockchain/LLMs for something" | SISP framing. Route to `idea-genesis` with refusal note. |
+| "I just need to start building" without validation | Action bias. Route to `problem-focus` or `rapid-experiments`. |
+| State doc exists and is <7 days old | This skill is the wrong one. Ask "Continue from `<last_skill>`, or reorient?" |
 
 ## When to Activate
 
@@ -23,6 +43,7 @@ Load these references before the first response:
 - `${CLAUDE_PLUGIN_ROOT}/references/tone-and-stance.md` — establishes the voice.
 - `${CLAUDE_PLUGIN_ROOT}/references/state-document-template.md` — the schema to instantiate.
 - `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md` — read/write rules.
+- `${CLAUDE_PLUGIN_ROOT}/references/aggressive-consultation-archetype.md`
 
 ## State Document Protocol
 
@@ -43,14 +64,12 @@ This skill is the *only* skill that creates `STARTUP-STATE.md` from scratch. Def
 
    One question, one answer. Don't combine with founder-context yet; that comes next.
 4. **Initialize `STARTUP-STATE.md`** by copying the template from `${CLAUDE_PLUGIN_ROOT}/references/state-document-template.md`. Populate whatever the user has already said in this conversation — name (if given), domain hints, idea sketch, time pressure. Fields the user hasn't addressed stay as placeholders. Set `_Last updated_` to today's ISO date with `by orientation`.
-5. **Route based on the option chosen.** Recommend the next skill explicitly:
-   - Option 1 → `founder-context`, then `idea-genesis`.
-   - Option 2 → `founder-context`, then `idea-pressure-test`.
-   - Option 3 → `founder-context`, then `discovery-coach` (debrief mode) — note that `discovery-coach` ships in Startup Skills v0.2; in v0.1 capture interview notes manually in the Evidence Log.
-   - Option 4 → `founder-context`, then `outreach-engine` (ships in v0.3).
-   - Option 5 → `signal-audit`, then `pivot-decision` (both ship in v0.2/v0.4 respectively).
-
-   When recommending a skill that has not yet shipped in the installed version, state which version it lands in and what to do in the interim (use the Evidence Log + the bias sentinel manually).
+5. **Route based on the option chosen.** Recommend the next skill explicitly with a one-sentence outcome sketch:
+   - Option 1 (No idea) → `founder-context` then `idea-genesis` → [2-3 weeks of organic interviews + parallel web research, surfaces 5-7 candidate idea spaces]
+   - Option 2 (Have idea, want to test) → `founder-context` then `idea-pressure-test` → [steel-man + Dalton 4-criteria + YC 10-question scoring, willing to say "kill it"]
+   - Option 3 (Talking to customers) → `founder-context` then `discovery-coach` (DEBRIEF) → [classifies every statement by evidence weight, surfaces false signals]
+   - Option 4 (Built something, need first customers) → `founder-context` then `outreach-engine` → [50-100 prospect list, YC-style outreach, funnel math backwards from goal]
+   - Option 5 (Customers but stalled) → `signal-audit` then `pivot-decision` → [reads entire state, applies Klein pre-mortem + Dalton opportunity cost, 3-5 scored pivot candidates]
 6. **Tell the user how to invoke the next skill explicitly.** "Type `/skill founder-context` to start, or just describe what you want next — I'll route to it."
 7. **Append Session Log entry.** One line with date, skill name, and the routing decision.
 
@@ -64,7 +83,6 @@ This skill is the *only* skill that creates `STARTUP-STATE.md` from scratch. Def
 - Founders bouncing between concepts without an anchor.
 - Restarting context every session because no shared state exists.
 - Vague generic advice that doesn't match where the founder is.
-- Pretending the v0.1 ships covers the full system — explicit version honesty up front.
 
 ## Recommended Next Skills
 
