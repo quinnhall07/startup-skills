@@ -1,7 +1,11 @@
 ---
 name: idea-genesis
-description: >
-  (startup-skills) Use when the founder has no idea or is generating candidates. Fires on "I have no idea," "what should I build," "I want to start something," or "brainstorming ideas." Runs an organic interview track alongside parallel web research. Surfaces 5-7 candidate idea spaces. Refuses Solution-In-Search-of-a-Problem framings like "AI is cool, what should I apply it to?"
+description: |
+  Surface 5-7 candidate idea spaces from the founder's lived experience + parallel web research on their domain. Refuses Solution-In-Search-of-a-Problem framings outright. Uses PG's "notice, don't think up" framing.
+
+  TRIGGER when: founder explicitly has no idea or has several and can't choose; says "I have no idea", "what should I build", "I want to start something", "exploring", "brainstorming ideas", "shopping for ideas"; after `founder-context` for Option 1 from `orientation`; founder pitches a SISP framing ("AI is cool, what should I apply it to?") and needs redirect.
+
+  SKIP: founder is already pressure-testing a specific idea (route to `idea-pressure-test`); founder has a sharp hypothesis (route to `problem-focus`); Founder Profile is empty (route to `founder-context` first).
 ---
 
 # Idea Genesis
@@ -16,6 +20,16 @@ Surfaces 5–7 candidate idea spaces grounded in (a) what the founder has actual
 
 Do NOT activate when the founder is already pressure-testing a specific idea — route to `idea-pressure-test`.
 
+## Red flags
+
+| Founder pattern | Response |
+|---|---|
+| "AI/blockchain/LLMs for something" | SISP. Refuse. Force pivot to lived pain. |
+| "Everyone has this problem" | False consensus. Force specificity. |
+| Dismisses a candidate as "boring" | Schlep blindness. Name it. Boring + regulated + tedious is often the moat. |
+| Locks onto first candidate immediately | Anchoring. Force weighting at least 3 before committing. |
+| "No one has built this yet" | Almost certainly a tar pit. Google before continuing. |
+
 ## Required Reading
 
 - `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md`
@@ -24,6 +38,8 @@ Do NOT activate when the founder is already pressure-testing a specific idea —
 - `${CLAUDE_PLUGIN_ROOT}/references/tar-pit-detection.md` — to flag obvious tar pits as candidates surface.
 - `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for pattern-matching candidates to known structures.
 - `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for the right essays/videos to surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/jtbd-protocols.md` — Klement's progress framing complements PG's noticing.
+- `${CLAUDE_PLUGIN_ROOT}/references/aggressive-consultation-archetype.md`
 
 ## State Document Protocol
 
@@ -59,6 +75,10 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
 5. **Synthesize 5–7 candidate idea spaces.** One sentence each. Tag each as `organic` (from the founder's lived experience only), `research` (from the public web only), or `hybrid` (both).
    - Good form: "Independent dental offices need a better scheduling tool — current ones don't integrate with insurance pre-auth, and reviews repeatedly call this out."
    - Bad form: "Make dentistry better." Reject candidates this vague; rewrite.
+
+   **One-liner template per candidate**: "[Customer type] need [problem statement] because [evidence from research or lived experience]."
+   Example: "Independent dental offices need better scheduling because current tools don't integrate insurance pre-auth (verified by 12 G2 reviews and 1 indie subreddit thread)."
+
    For each candidate, name *one specific potential customer*: a named role, a named company, or — best — a named human the founder already knows who fits the profile.
 
 6. **Bias sentinel pass per `${CLAUDE_PLUGIN_ROOT}/references/bias-sentinel.md`.** Watch for:
@@ -70,9 +90,14 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
 
 8. **Ask the founder to pick 2–3.** "Which 2–3 resonate most? We'll take those to `idea-pressure-test`."
 
-9. **Update state document.** Log every candidate (including the not-chosen) under What We Know vs What We've Assumed → "Candidate idea spaces" with the tag and source. Add the chosen 2–3 as One-Liner candidates v1.
+9. **Update state document.** Log every candidate (including not-chosen) under What We Know vs What We've Assumed → "Candidate idea spaces" with the tag and source. Add the chosen 2-3 as One-Liner candidates v1.
 
-10. **Recommend next skill:** `idea-pressure-test` for the chosen 2–3. If the founder is too uncertain even to pick, recommend `market-intel` on the broadest candidate to deepen the research first.
+   To support cofounder/investor conversations, offer an Idea Candidate Brief: "I can produce an Idea Candidate Brief summarizing the 5-7 candidates with source, customer, and hypothesis — useful to share or archive."
+
+10. **Recommend next skill:**
+    - Founder picks 2-3 candidates immediately → `idea-pressure-test` on the chosen 2-3.
+    - Founder paralyzed by 4+ good candidates → "Pick the top 3 by gut. We'll use `market-intel` on each to break the tie, then pressure-test the strongest."
+    - Founder uncertain about any candidate due to FMF gap → `cofounder-fit` first.
 
 ## Outputs
 
@@ -81,7 +106,7 @@ Read `STARTUP-STATE.md`; confirm Founder Profile is rich enough (domain, technic
   - When introducing the "notice, don't think up" framing → PG *How to Get Startup Ideas*.
   - When schlep blindness fires → PG *Schlep Blindness* (short, links well here).
   - When the founder asks "but what kind of idea is good?" → YC video *Where Do Great Startup Ideas Come From*.
-- **Artifact on request only:** Idea Candidate Brief — a one-page markdown doc summarizing the 5–7 candidates with source, target customer, and rough hypothesis. Offer once, do not auto-generate: "I can produce an Idea Candidate Brief if you'd like to share it with a cofounder or save it for later."
+- **Artifact (offered in step 9):** Idea Candidate Brief — a one-page markdown doc summarizing the 5–7 candidates with source, target customer, and rough hypothesis. Generate when the founder accepts the offer.
 
 ## Anti-Patterns Prevented
 

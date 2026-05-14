@@ -1,7 +1,11 @@
 ---
 name: founder-context
-description: >
-  (startup-skills) Use to capture who the founder is: domain expertise, technical ability, time horizon, resources, risk tolerance, and starting point. Fires on phrases like "I work in," "I can't code," "I have X months," "I'm doing this solo," or whenever context changes (left job, found cofounder, raised money). Runs parallel web research on the founder's domain while interviewing.
+description: |
+  Capture who the founder is: domain expertise, technical ability, time horizon, resources, archetype, risk tolerance, starting point. Without this, every later skill speculates. Runs parallel domain research while interviewing. Pattern-matches the founder to known case-study analogues.
+
+  TRIGGER when: right after `orientation` for any new founder; Founder Profile section of `STARTUP-STATE.md` is empty OR stale (>90 days); founder reports context change ("I left my job", "I have a cofounder", "I just raised", "I lost runway"); founder says "I work in", "I've been a", "I can't code", "I have X months", "I'm doing this solo", "I have a cofounder".
+
+  SKIP: Founder Profile is already populated AND <90 days old AND user hasn't reported a context change (ask "anything changed since last time?" — if no, skip to routing based on Current Starting Point); user is mid-flow in another skill.
 ---
 
 # Founder Context
@@ -15,6 +19,17 @@ Captures who the founder is, what they know, what they have, and what they're wi
 - Whenever the Founder Profile section of `STARTUP-STATE.md` is empty, stale (>90 days), or contradicts what the user is now saying.
 - On phrases like "I work in," "I've been a," "I can't code," "I have X months," "I'm doing this solo," "I have a cofounder," "I just left my job," "I raised X."
 
+Auto-fire only if: (Founder Profile is empty OR stale >90 days) AND (user phrase matches one of the explicit triggers OR user is in mid-orientation flow). Do not fire silently mid-conversation when Profile is fresh.
+
+## Red flags
+
+| Founder claim | Response |
+|---|---|
+| "I work in X" but vague on actual scars | Drill: "What part makes you swear? Last time you wanted to throw the keyboard?" |
+| "I can build it myself" but no shipping history | Verify with one specific build. If none, FMF technical leg is shaky. |
+| "I have six months" + full-time-on-savings | Demand specific runway months. "Live with it" needs a floor in dollars. |
+| "My cofounder will handle X" but X is sales pre-PMF | Route to `cofounder-fit` immediately. Sales is founder work pre-PMF. |
+
 ## Required Reading
 
 - `${CLAUDE_PLUGIN_ROOT}/references/state-document-protocol.md` — read/write rules.
@@ -22,6 +37,8 @@ Captures who the founder is, what they know, what they have, and what they're wi
 - `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md` — for the parallel domain research.
 - `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md` — for pattern-matching the founder to known structures.
 - `${CLAUDE_PLUGIN_ROOT}/references/external-resources.md` — for the right reading to surface.
+- `${CLAUDE_PLUGIN_ROOT}/references/founder-resilience-protocols.md` — runway floor, sustainable pace check.
+- `${CLAUDE_PLUGIN_ROOT}/references/aggressive-consultation-archetype.md` — voice.
 
 ## State Document Protocol
 
@@ -42,7 +59,7 @@ Read `STARTUP-STATE.md` at activation. Confirm the Founder Profile section is em
 
 3. **Parallel domain research.** As soon as Q1 is answered, launch web research on the stated domain using `${CLAUDE_PLUGIN_ROOT}/references/research-playbook.md`. 4–6 searches across forum pain, review complaints, job postings, and failed-startup retrospectives in the founder's domain. Surface a 4-bullet domain context note alongside the interview. Do not stall the questions waiting for research; let it run.
 
-4. **Pattern-match to case studies.** After the seven questions, compare the profile to `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`. If there's a strong structural analogue, say so explicitly: "Your background is structurally similar to Tracy Young at PlanGrid — domain expert + technical cofounder, schlep-heavy regulated B2B. Here's what worked for them: …" If no clean match, do a quick web search for fresh analogues rather than force-fitting.
+4. **Pattern-match to case studies.** Mandatory pattern-match: compare the profile to `${CLAUDE_PLUGIN_ROOT}/references/case-studies.md`. If no clean match, web search for fresh analogues. Surface the closest analogue and the lesson — don't force-fit, but don't skip. Example: "Your background is structurally similar to Tracy Young at PlanGrid — domain expert + technical cofounder, schlep-heavy regulated B2B. Here's what worked for them: …"
 
 5. **Surface questions only the founder could answer.** From the research, identify 2–3 ambiguities — things the public web cannot resolve. Ask only the founder. Examples: "Reviews say the existing tools fail on X; is X actually what your people complain about, or is it Y?" "Job postings suggest companies hire Z roles to handle this; do those roles in *your* network buy software, or do they build it in-house?"
 
@@ -56,9 +73,9 @@ Read `STARTUP-STATE.md` at activation. Confirm the Founder Profile section is em
 8. **Recommend next skill** based on Starting Point:
    - No idea → `idea-genesis`.
    - Problem observed / have an idea → `idea-pressure-test`.
-   - Talking to customers → `discovery-coach` (v0.2; until then, log interviews manually in Evidence Log).
-   - Product built, need customers → `outreach-engine` (v0.3; until then, focus on writing a 50–100 prospect list manually).
-   - Customers but stalled → `signal-audit` (v0.2) then `pivot-decision` (v0.4).
+   - Talking to customers → `discovery-coach`.
+   - Product built, need customers → `outreach-engine`.
+   - Customers but stalled → `signal-audit` then `pivot-decision`.
 
 ## Outputs
 
