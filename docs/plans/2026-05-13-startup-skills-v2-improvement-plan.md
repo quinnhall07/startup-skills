@@ -4,6 +4,8 @@
 **Author:** Synthesis from internal audit + 10 parallel external-research agents
 **Target:** Take a strong v0.4 system (median skill score 27/30, exemplary reference library, mean reference score 4.82/5) and turn it into the best-in-class founder-advisor system on Claude Code.
 
+> **Note (post-ship)**: This plan proposed 22 skills + 33 references. The shipped v0.5 release contains **21 skills + 33 references**. The plan's optional `distribution-2026` skill was folded into the existing `outreach-engine` rewrite (deliverability + LinkedIn comment-first + signal-based outbound modules) rather than spun off. All other proposals shipped as written. See [`CHANGELOG.md`](../../CHANGELOG.md) [0.5.0] for the final shipped scope.
+
 **Scope:** Skill-engineering upgrades, methodology refresh for 2026, six new skills, ten new references, architectural improvements (state schema v2, subagent forking, hooks), eval harness, and a launch plan.
 
 ---

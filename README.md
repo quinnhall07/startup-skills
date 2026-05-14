@@ -185,7 +185,7 @@ Noncommercial use is free. Commercial use requires a license from the maintainer
 
 ## Contributing
 
-Issues welcome — bugs, mis-attributions, methodology gaps, false-positive bias-sentinel firings. PRs for new skills and references are reviewed against `startup-skills-spec-v0.2.md`. Keep skills under 250 lines, keep references high-density, cite sources.
+Issues welcome — bugs, mis-attributions, methodology gaps, false-positive bias-sentinel firings. PRs for new skills and references are reviewed against the design rationale in [`docs/plans/2026-05-13-startup-skills-v2-improvement-plan.md`](./docs/plans/2026-05-13-startup-skills-v2-improvement-plan.md) and the original v0.4 spec at [`docs/specs/2026-05-12-v0.4-design-spec.md`](./docs/specs/2026-05-12-v0.4-design-spec.md). Keep skills under 250 lines, keep references high-density, cite sources. See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the checklist.
 
 ## Acknowledgments
 
