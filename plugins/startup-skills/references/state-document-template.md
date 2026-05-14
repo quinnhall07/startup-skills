@@ -9,7 +9,7 @@ When `orientation` initializes the file, it copies the template below and popula
 ```markdown
 # Startup State — [Name or "Unnamed"] — [Date initialized]
 _Last updated: [ISO date] by [skill name]_
-_Schema version: 1.0_
+_Schema version: 2.0_
 
 ## Founder Profile
 - Name (optional):
@@ -104,6 +104,55 @@ _Schema version: 1.0_
 ## Next Action — Claude (parallel)
 -
 
+## Positioning (post-validation, schema v2)
+- Competitive alternatives:
+- Unique attributes:
+- Best-fit customer (sharper than ICP):
+- Market category:
+- Strategic narrative (Raskin: BIG shift / winners-losers / promised land / obstacles / magic gifts):
+
+## AI Economics (if AI-product, schema v2)
+- Token cost per active user (last 30d): $
+- LTV / inference-cost ratio: X (target ≥3)
+- Margin per active user trend: improving / flat / declining
+- Model dependency risk: low / medium / high (foundation lab could ship this natively)
+- Vibe-vs-craft decision logged: vibe / craft / hybrid, date: YYYY-MM-DD
+
+## Retention Cohorts (post-launch, schema v2)
+- D1 retention: X%
+- D7 retention: X%
+- D28 retention: X%
+- D90 retention: X%
+- L7/L28 curve shape: smile / frown / flat
+- Cohort retention by signup month (table)
+
+## Opportunity Solution Tree (post-validation, schema v2)
+- Outcome (single, measurable):
+- Opportunities (children, in customer language):
+  - [opportunity 1]
+    - Solutions:
+      - [solution]
+        - Assumption tests: [test] (status: queued/running/done)
+  - [opportunity 2]
+  - ...
+
+## Decision Journal (schema v2)
+| # | Date | Decision | State | Confidence% | Alternatives | Key assumptions | Review date | Outcome |
+|---|------|----------|-------|-------------|--------------|-----------------|-------------|---------|
+
+## Kill Criteria Registry (schema v2)
+| # | Criterion | Deadline | Status | Outcome |
+|---|-----------|----------|--------|---------|
+
+## Sycophancy Check (auto-logged every 5 turns, schema v2)
+- Last contrarian pass: [date / turn]
+- Recent disagreements logged:
+- Recent unquantified praise count:
+
+## Research Cache (deduplication, schema v2)
+| Topic | Last researched | Source skill | Brief location |
+|-------|-----------------|--------------|----------------|
+
 ## Session Log
 - [date] [skill] — [one-sentence summary, decisions made, evidence added]
 ```
@@ -116,3 +165,14 @@ _Schema version: 1.0_
 - **Evidence Log.** Append-only. Never edit prior entries. If a quote turns out to be misclassified, add a new row with the corrected weight and a Notes pointer to the original.
 - **Session Log.** One line per skill invocation. Date, skill name, one-sentence summary. Keeps the audit trail without bloating the doc.
 - **Forward references.** Some sections cite references that ship in later versions of Startup Skills. Skills shipping in v0.1 must not block on those — log what they can, leave fields blank until the relevant reference and skill exist.
+- **Schema v2 (2026-05-13)**: added AI Economics, Retention Cohorts, Positioning, Opportunity Solution Tree, Decision Journal, Kill Criteria Registry, Sycophancy Check, Research Cache. Migration: existing v1 state docs are forward-compatible; new sections are populated by new skills as they fire. No data loss.
+
+## Migration from v1.0 to v2.0
+
+If your existing `STARTUP-STATE.md` is schema v1, it's forward-compatible — new sections populate when relevant skills fire. To manually migrate:
+
+1. Update `_Schema version: 1.0_` to `_Schema version: 2.0_`.
+2. Append the new sections from the template above (Positioning, AI Economics, Retention Cohorts, Opportunity Solution Tree, Decision Journal, Kill Criteria Registry, Sycophancy Check, Research Cache).
+3. Leave fields empty until the relevant skill fires.
+
+Schema v2 is the canonical version as of May 2026. All skills shipped in v2.0 of startup-skills assume schema v2 fields.

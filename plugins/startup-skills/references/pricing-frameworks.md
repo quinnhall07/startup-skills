@@ -14,6 +14,108 @@ Pricing decisions for pre-PMF and early-PMF startups. Synthesis of YC's *How to 
 
 5. **For B2C: freemium can work, conditional.** Only if free users generate genuine *network* or *data* value. Slack's free tier worked because free teams became viral seeds inside companies that eventually paid. Dropbox's free tier worked because free users referred others. If the free user creates no value for the eventual paying customer, freemium is a tax.
 
+## Ramanujam — Monetizing Innovation (the master framing)
+
+Attribution: Madhavan Ramanujam, *Monetizing Innovation* (Simon-Kucher, 2016). 72% of innovations miss financial targets. Cause: companies design the product, then bolt on a price. Fix: **design the product around the price**. Have the willingness-to-pay (WTP) conversation *before* writing code. See [Marketing Journal summary](https://www.marketingjournal.org/monetizinginnovation/).
+
+### The four innovation/pricing failure modes
+1. **Feature Shocks** — over-stuffed product, customers won't pay for the bloat.
+2. **Minivations** — right product, right market, **priced too low**. (Most pre-PMF B2B founders live here.) Reframe: "charge from day one" is a corollary of "design around the price; don't undershoot it."
+3. **Hidden Gems** — blockbuster product never brought to market because it sits outside the core.
+4. **Undeads** — shipped products with zero demand; should have been killed during WTP interviews.
+
+### Pricing-led development process
+- Talk to 30-100 target customers about WTP for each feature *bundle*, not the whole product.
+- Segment by WTP, not demographics — willingness-to-pay clusters reveal natural tiers.
+- Use WTP as a build/cut gate; if WTP < target margin, kill the feature.
+
+## Patrick Campbell — WTP research methodology (Van Westendorp PSM)
+
+See [Acquired FM pricing episode with Patrick Campbell](https://www.acquired.fm/episodes/pricing-everything-you-always-wanted-to-know-but-were-afraid-to-ask-with-profitwell-ceo-patrick-campbell).
+
+Four-question survey:
+1. At what price is it *so expensive* you would never buy? (upper bound)
+2. At what price is it *expensive but you'd still consider*? (premium)
+3. At what price is it *a bargain*? (value floor)
+4. At what price is it *so cheap you'd doubt quality*? (lower bound)
+
+Plot cumulative curves; intersections give **Optimal Price Point (OPP)** and **Indifference Price Point (IPP)**. Accuracy ±20-25%.
+
+### Sample size
+- N≥40 per persona for directional.
+- N≥150 for stable curves.
+- Run by **persona** ("quantified buyer personas"). Never blend WTP across segments — averages lie.
+
+### Layer Conjoint Analysis for feature-level WTP
+Force-rank trade-offs across hypothetical bundles to isolate marginal value per feature.
+
+## AI product pricing 2025-2026
+
+See [Bain: per-seat software pricing isn't dead, but new models are gaining steam](https://www.bain.com/insights/per-seat-software-pricing-isnt-dead-but-new-models-are-gaining-steam/) and the [Bessemer AI Pricing and Monetization Playbook](https://www.bvp.com/atlas/the-ai-pricing-and-monetization-playbook).
+
+### Why per-seat is breaking (not dead, but eroding)
+- Agents replace seats. If one Fin agent resolves what 5 humans did, who's the "seat"?
+- COGS is variable (token cost) — fixed per-seat pricing inverts unit economics under heavy users.
+- Bain/Sierra/Pilot data: per-seat AI products show **40% lower gross margins** and **2.3× higher churn** than usage/outcome pricing.
+
+### Four AI pricing patterns in market
+
+| Model | Unit | Examples | Best for |
+|---|---|---|---|
+| **Consumption / token** | Tokens, API calls | OpenAI API, Anthropic API | Infra / dev tools |
+| **Credit-based** | Abstract credits, model-weighted | Cursor ($20 = $20 credits), Copilot (300 premium req/mo) | Mixed-model products |
+| **Outcome-based** | Resolved ticket, booked meeting, recovered cart | Intercom Fin ($0.99/resolution), Sierra (per outcome) | Agent products with measurable outcomes |
+| **Hybrid** | Platform fee + meter | Most modern SaaS+AI | Default for new launches |
+
+### Token COGS reality check
+AI products run **30-60% COGS-to-revenue** (vs <10% traditional SaaS). The "80% gross margin SaaS rule" is broken — AI SaaS lives at 50-70%.
+
+Founders must price *value* not *cost*, but must instrument *cost per request* or die on a heavy user.
+
+### Outcome-pricing formula (Sierra pattern)
+Charge **10-30% of human-replaced cost**. Define an outcome contract (e.g. "resolved" = customer confirms or no reopen in 7 days). Refund on failure. See [Sierra: outcome-based pricing for AI agents](https://sierra.ai/blog/outcome-based-pricing-for-ai-agents).
+
+For full AI-era anti-patterns including token-cost denial trap, load `${CLAUDE_PLUGIN_ROOT}/references/ai-era-anti-patterns.md`.
+
+## Boundary conditions for "charge from day one"
+
+Existing rule preserved: charge from day one is correct for B2B with bounded users + measurable value.
+
+**Wrong / risky when:**
+- **Consumer products** where conversion economics require massive top-of-funnel (a16z, Seibel both note this).
+- **Marketplaces / two-sided networks**: liquidity must precede monetization on at least one side.
+- **Strong viral-coefficient products** (Slack, Figma, Notion early days): viral spread is the moat — paywalling kills the loop.
+- **Bottoms-up dev tools** with strong viral coefficient (k > 0.5).
+
+For these: charge as soon as you've proven the loop, not before.
+
+## B2B freemium gates (when freemium works)
+
+Require **ALL** of:
+- Viral coefficient k > 0.4 (each user pulls ≥0.4 new users).
+- Sub-$1K ACV.
+- Self-serve activation, low marginal COGS per free user (<$0.50/mo).
+- Clear "free tier ceiling" forces upgrade (storage, seats, runs).
+
+**Benchmark:** top-quartile B2B freemium converts 5-8%; median 2.6%. If you're not modeling a path to 5%+ within 12 months, don't launch freemium.
+
+**Mental model:** "Free tier is a marketing line item, not a product tier." Budget it as CAC. If freemium CAC-equivalent exceeds paid CAC, kill it.
+
+## The anti-discount rule
+
+Discount **scope** or **term length**, never **list price**. Each 20% discount requires 25% more volume to break even. The $20/month founder cannot become the $200/month founder without losing the original customers.
+
+## Tier ratio rule of thumb
+
+1 : 2.5 : 6 (Starter : Pro : Enterprise) approximates median B2B SaaS. Adjust based on WTP clusters from PSM.
+
+## Rule-of-thumb formulas
+
+- **Value-based price** = 10-25% of customer's quantified gain (cost saved + revenue added).
+- **AI outcome price** = (human-cost-replaced) × 0.10 to 0.30.
+- **First-customer price** = whatever they'll sign for **minus 0%**. Raise on customer #6.
+- **Path to $1M ARR**: $1M / (price × 12) = customers needed. Cross-reference `${CLAUDE_PLUGIN_ROOT}/references/sales-funnel-math.md`.
+
 ## Revenue models by archetype
 
 | Archetype | Most common model | When to consider alternatives |
